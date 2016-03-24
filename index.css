@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Qwigley);
+
+.grid{
+	margin-left: 9%;
+}
+.grid-item {
+  /* width: 393px;
+  height: 510px; */
+  width: 26%;
+  margin:15px;
+  box-shadow: 0 0 20px gray;
+}
+.grid-item:hover {
+  transition: ease-in;
+}
+.grid-item2 {
+  width: 100%;
+  margin:15px;
+  margin-right: 200px;
+}
+.grid-item3 {
+ /*  height: 325px; */
+/*   width: 503px; */
+	display: inline-block;
+	width: 27%;
+	margin: 18px;
+  box-shadow: 0 0 20px gray;
+}
+.grid-item--width2 { 
+/*   width: 770px;
+ *//*   height: 510px; */
+ 	width: 58%;
+  margin:15px;
+  box-shadow: 0 0 20px gray; 
+}
+.grid-item--width3 { 
+  /* width: 770px;
+  height: 510px; */
+  width: 85%;
+  margin:15px;
+  border: 10px solid white;
+  box-shadow: 0 0 20px gray;
+  float:left;
+}
+.intro2{
+	font-size: 1.1em;
+	padding: 10px;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+.intro1{
+	display: flex;
+  width: 87%;
+  justify-content: center;
+  margin-top: 90px;
+}
+.introtext1{
+	width: 55%;
+}
+.introtext2{
+	width: 45%;
+}
+i{
+	color: black;
+}
+i.fa.fa-linkedin-square{
+	display: block;
+	margin-top: 30px;
+}
+a{
+	text-decoration: none;
+}
+i.fa.fa-linkedin-square:hover,
+i.fa.fa-github-square:hover,
+i.fa.fa-envelope-square:hover{
+transform: scale(1.2);
+}
+.social_icons1{
+	text-align: center;
+}
+.header1{
+	margin-bottom: 50px;
+}
+.header2{
+  font-size: 3.5em;
+  font-family: "Qwigley";
+}
+i.fa.fa-bars.fa-2x.header3{
+	position: absolute;
+	right: 11%;
+	top: 10%;
+	padding-right: 9px;
+}
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.fade:hover {
+	opacity: 0.7;
+}
+.center{
+	text-align: center;
+}
+.skills2{
+	list-style-type: none;
+}
+.skills1{
+	padding-left: 38%;
+	padding-bottom: 5px;
+}
+.skills3{
+	padding-left: 30%;
+	padding-bottom: 5px;
+}
+@media only all and (max-width: 1178px){
+	
+	.grid-item3{
+		display: block;
+    width: 86%;
+    padding: 10px;
+    margin-bottom: 60px;
+	}
+	.skills3{
+	padding-left: 38%;
+	padding-bottom: 5px;
+}
+}	
