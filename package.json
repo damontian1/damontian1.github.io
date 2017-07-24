@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/webpack/bin/webpack.js && node server.js",
-    "develop": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "dependencies": {
     "babel-core": "^6.24.1",

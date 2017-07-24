@@ -12,8 +12,8 @@ class App extends React.Component {
         <Navigation />
         <div className="container">
           <Banner />
-          <WorkDetails />
           <WorkGallery />
+          <WorkDetails />
         </div>
         <Footer />
       </div>

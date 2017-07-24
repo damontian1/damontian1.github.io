@@ -11355,9 +11355,13 @@ var App = function (_React$Component) {
         "div",
         null,
         _react2.default.createElement(_Navigation2.default, null),
-        _react2.default.createElement(_Banner2.default, null),
-        _react2.default.createElement(_WorkDetails2.default, null),
-        _react2.default.createElement(_WorkGallery2.default, null),
+        _react2.default.createElement(
+          "div",
+          { className: "container" },
+          _react2.default.createElement(_Banner2.default, null),
+          _react2.default.createElement(_WorkGallery2.default, null),
+          _react2.default.createElement(_WorkDetails2.default, null)
+        ),
         _react2.default.createElement(_Footer2.default, null)
       );
     }
@@ -11406,9 +11410,35 @@ var Banner = function (_React$Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
-        "Banner"
+        "section",
+        { id: "banner" },
+        _react2.default.createElement(
+          "div",
+          { className: "row" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-12" },
+            _react2.default.createElement(
+              "div",
+              { className: "jumbotron" },
+              _react2.default.createElement(
+                "h1",
+                null,
+                "hello"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+              ),
+              _react2.default.createElement(
+                "button",
+                { className: "btn btn-success" },
+                "GO"
+              )
+            )
+          )
+        )
       );
     }
   }]);
@@ -11463,152 +11493,142 @@ var Footer = function (_React$Component) {
           null,
           _react2.default.createElement(
             "div",
-            { className: "container-fluid" },
+            { className: "container" },
             _react2.default.createElement(
               "div",
-              { className: "row" },
+              null,
               _react2.default.createElement(
                 "div",
-                { className: "col-md-3" },
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Contact"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "22 Lever St."
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Manchester"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "M1 1EA"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "+44 (0)161 235 5318"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "hello@madebyfieldwork.com"
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "col-md-3" },
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Plan a Project"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Do you have a project in mind? Use our project planner to get started."
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "col-md-3" },
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Subscribe to our Newsletter"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Good wholesome stuff, once a month or thereabouts"
-                ),
-                _react2.default.createElement(
-                  "form",
-                  null,
-                  _react2.default.createElement(
-                    "div",
-                    { className: "form-group" },
-                    _react2.default.createElement("input", { type: "text", placeholder: "Name" }),
-                    _react2.default.createElement("br", null),
-                    _react2.default.createElement("input", { type: "email", placeholder: "Email Address" }),
-                    _react2.default.createElement("br", null),
-                    _react2.default.createElement("input", { type: "submit", placeholder: "Send Message" })
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "col-md-3 social-footer" },
+                { className: "row", style: { margin: "0 auto" } },
                 _react2.default.createElement(
                   "div",
-                  { className: "row" },
+                  { className: "col-md-4 col-sm-6 footer-column" },
                   _react2.default.createElement(
-                    "div",
-                    { className: "col-md-12" },
+                    "p",
+                    null,
                     _react2.default.createElement(
-                      "p",
+                      "strong",
                       null,
-                      "Connect with me on these websites"
+                      "Site Info"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "\xA9 2017 | By Damon Tian"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Built with: ReactJS, ExpressJS,"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "NodeJS, Redux, MongoDB"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Bootstrap, Sass, Sketch"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-3 col-sm-6 footer-column" },
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                      "strong",
+                      null,
+                      "Contact Info"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Damon Tian"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "New York, NY"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "718-559-2277"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "damontian@live.com"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-3 col-sm-6 footer-column" },
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                      "strong",
+                      null,
+                      "Leave me a message"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "form",
+                    null,
+                    _react2.default.createElement(
+                      "div",
+                      { className: "form-group" },
+                      _react2.default.createElement("input", { type: "text", placeholder: "Enter Your Email" }),
+                      _react2.default.createElement("br", null),
+                      _react2.default.createElement("textarea", { type: "text", placeholder: "Enter Your Message", rows: "1" }),
+                      _react2.default.createElement("br", null),
+                      _react2.default.createElement("input", { type: "submit", value: "Send Message" })
                     )
                   )
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "row" },
+                  { className: "col-md-2 col-sm-6 text-center footer-column" },
                   _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9 col-md-offset-3" },
+                    "p",
+                    null,
                     _react2.default.createElement(
-                      "p",
+                      "strong",
                       null,
-                      "GitHub"
+                      "Connect with me"
                     )
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "LinkedIn"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "GitHub"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Angel.co"
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "FaceBook"
                   )
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "row" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9 col-md-offset-3" },
-                    _react2.default.createElement(
-                      "p",
-                      null,
-                      "LinkedIn"
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "row" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9 col-md-offset-3" },
-                    _react2.default.createElement(
-                      "p",
-                      null,
-                      "Angel.co"
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "row" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9 col-md-offset-3" },
-                    _react2.default.createElement(
-                      "p",
-                      null,
-                      "FaceBook"
-                    )
-                  )
+                  { className: "col-md-2" },
+                  _react2.default.createElement("div", null)
                 )
               )
             )
@@ -11661,9 +11681,69 @@ var Navigation = function (_React$Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
-        "Navigation"
+        "section",
+        { id: "navigation" },
+        _react2.default.createElement(
+          "nav",
+          { className: "navbar navbar-default navbar-fixed-top" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "div",
+              { style: { display: "flex", justifyContent: "space-between" } },
+              _react2.default.createElement(
+                "div",
+                { className: "navbar-header" },
+                _react2.default.createElement(
+                  "a",
+                  { href: "#" },
+                  _react2.default.createElement(
+                    "svg",
+                    { width: "188px", height: "30px", viewBox: "0 0 188 36", version: "1.1", xmlns: "http://www.w3.org/2000/svg" },
+                    _react2.default.createElement(
+                      "g",
+                      { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", fontSize: "50", fontFamily: "Qwigley-Regular, Qwigley", fontWeight: "normal" },
+                      _react2.default.createElement(
+                        "text",
+                        { id: "Damon-Tian", fill: "#000000" },
+                        _react2.default.createElement(
+                          "tspan",
+                          { x: "-0.664", y: "30" },
+                          "Damon Tian"
+                        )
+                      )
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "navbar-social-media" },
+                _react2.default.createElement(
+                  "a",
+                  { href: "https://www.linkedin.com/in/damontian1/", target: "_blank" },
+                  _react2.default.createElement("i", { className: "fa fa-linkedin", "aria-hidden": "true" })
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "https://github.com/damontian1/", target: "_blank" },
+                  _react2.default.createElement("i", { className: "fa fa-github", "aria-hidden": "true" })
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "https://angel.co/damontian1", target: "_blank" },
+                  _react2.default.createElement("i", { className: "fa fa-angellist", "aria-hidden": "true" })
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "https://www.facebook.com/damontian1", target: "_blank" },
+                  _react2.default.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
+                )
+              )
+            )
+          )
+        )
       );
     }
   }]);
@@ -11711,9 +11791,40 @@ var WorkDetails = function (_React$Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
-        "WorkDetails"
+        "section",
+        { id: "work-details" },
+        _react2.default.createElement(
+          "div",
+          { className: "row" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-12" },
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Work Details"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "jumbotron" },
+              _react2.default.createElement(
+                "h1",
+                null,
+                "hello"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+              ),
+              _react2.default.createElement(
+                "button",
+                { className: "btn btn-success" },
+                "GO"
+              )
+            )
+          )
+        )
       );
     }
   }]);
@@ -11761,9 +11872,105 @@ var WorkGallery = function (_React$Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
-        "WorkGallery"
+        "section",
+        { id: "work-gallery" },
+        _react2.default.createElement(
+          "div",
+          { className: "row" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-12" },
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Projects"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "Project 1"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "Project 2"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "Project 3"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "Project 4"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "Project 5"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-4", style: { margin: "1em 0em" } },
+            _react2.default.createElement(
+              "a",
+              { href: "#work-details" },
+              _react2.default.createElement("div", { className: "movie-cover-art", style: { width: "100%", height: "300px", background: "lightgreen", borderRadius: "5px" } })
+            ),
+            _react2.default.createElement(
+              "h5",
+              null,
+              "More Projects under way.."
+            )
+          )
+        )
       );
     }
   }]);
@@ -12662,7 +12869,7 @@ exports = module.exports = __webpack_require__(105)(undefined);
 
 
 // module
-exports.push([module.i, "section#footer input {\n  padding: 0.5em 0em;\n  border-top-style: none;\n  border-right-style: none;\n  border-bottom-style: solid;\n  border-left-style: none; }\n\nsection#footer input[type=\"submit\"] {\n  background: transparent; }\n", ""]);
+exports.push([module.i, ".navbar {\n  border-radius: 0; }\n\nbody {\n  padding-top: 6em; }\n\nsection#footer {\n  margin-top: 3em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.25em;\n  padding: 0.5em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1.25em;\n  padding: 0.5em 0em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; } }\n", ""]);
 
 // exports
 
