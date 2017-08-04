@@ -5,7 +5,7 @@
  // $primary: #3F5EF8;
  // $secondary: #f7f7f7;
  // $highlight: #3ecf8e;
- // $dim: rgba(0,0,0,0.2);
+ $dim: #f7f7f7;
  // $text: #6b7c93;
 
 
@@ -15,13 +15,13 @@
 
 body {
   padding-top: 7em;
+  font-family: "Sarala";
 }
 // .navbar.navbar-slideup {
 //   position: absolute;
 //   top: -60px;
 //   transition: 500ms ease
 // }
-
 /***********************/
 /* bootstrap overrides */
 /***********************/
@@ -29,12 +29,36 @@ body {
 .navbar {
   border-radius: 0;
 }
+.jumbotron {
+  background: #f7f7f7;
+}
 
 /***********************/
 /*       desktop       */
 /***********************/
-
+section#work-gallery {
+  padding-top: 80px;
+  .overlay {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+  }
+  .project-cover-art:hover .overlay {
+    opacity: 1;
+    transition: 0.5s ease;
+    filter: blur(0px);
+  }
+}
 section#footer {
+  background: #f7f7f7;
   margin-top: 3em;
   footer{  
     border-top: 1px solid #e7e7e7;
@@ -47,6 +71,7 @@ section#footer {
     border-bottom-style: solid;
     border-left-style: none;
     outline: none;
+    background: transparent;
   }
   textarea {
     resize: none;
@@ -57,6 +82,7 @@ section#footer {
     border-left-style: none;
     outline: none;
     padding: 0.5em 0em;
+    background: transparent;
   }
   input[type="submit"] {
     background: transparent;
@@ -79,18 +105,65 @@ section#navigation {
     background: rgba(255, 255, 255, 0.9)
   }
   .navbar-social-media {
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 1em 0em;
     i {
       padding: 0em 0.5em;
     }
   }
   .navbar-header {
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 0.5em 0em;
     a {
       color: black;
     }
+  }
+}
+
+section#banner {
+  button {
+    margin: 0em 0.5em;
+  }
+}
+
+section#work-details {
+  padding-top: 80px;
+  .project-description {
+    display: block;
+    padding: 0.2em 3em;
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
+  .project-header {
+    display: block;
+    padding: 0em 1.3em;
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
+  a {
+    font-decoration: none;
+    color: black;
+  }
+  p {
+    position: relative;
+    font-size: 1.1em;
+    padding: 1em 0em
+  }
+  .project-description:before {
+    content: "";
+    background: black;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 37px;
+    height: 4px;
+  }
+  .tag {
+    display: inline-block;
+    padding: 0.1em 1em;
+    margin: 0.2em 0.2em;
+    background: #e8e8e8;
+    border-radius: 2px;
   }
 }
 

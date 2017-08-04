@@ -3,14 +3,14 @@ import React from "react";
 class Banner extends React.Component {
   render(){
     return(
-      <section id="banner">
+      <section id="banner" style={{padding: "3em 0em"}}>
         <div className="row">
-          <div className="col-md-12">
-            <div className="jumbotron">
-              <h1>hello</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-              <button className="btn btn-success">GO</button>
-            </div>
+          <div className="col-md-8 col-md-offset-2 text-center">
+              <h1 style={{padding: "1em 0em 0em 0em", fontWeight: "bolder", }}>Hey, you found me! I’m Damon, a Web Developer based in New York City and I love building beautiful and intuitive web applications.</h1>
+              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <hr/>
+              <button className="btn btn-default">RESUME</button> 
+              <button className="btn btn-default">SEND A MESSAGE</button>
           </div>
         </div>
       </section>
