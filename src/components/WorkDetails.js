@@ -7,7 +7,7 @@ class WorkDetails extends React.Component {
       return item._id.$oid === id;
     })
     return(
-      <div>
+      <div style={{display: "flex",alignItems: "center"}}>
         <div className="col-md-8">
           <img src={selectedProject[0].desktop} style={{width: "100%"}} />
         </div>
