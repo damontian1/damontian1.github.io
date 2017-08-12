@@ -12,7 +12,9 @@
 /***********************/
 /*       global        */
 /***********************/
-
+* {
+  box-sizing: border-box;
+}
 body {
   padding-top: 7em;
   font-family: "Sarala";
@@ -32,6 +34,13 @@ body {
 .jumbotron {
   background: #f7f7f7;
 }
+#work-details.hide {
+  opacity: 0 !important;
+}
+#work-details.fade {
+  opacity: 1 !important;
+  transition: 1s ease-in-out;
+}
 
 /***********************/
 /*       desktop       */
@@ -44,12 +53,13 @@ section#work-gallery {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3em;
+    padding: 2em;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     opacity: 0;
+    text-align: center;
   }
   .project-cover-art:hover .overlay {
     opacity: 1;
