@@ -7,13 +7,13 @@ class WorkDetails extends React.Component {
       return item._id.$oid === id;
     })
     return(
-      <div style={{display: "flex",alignItems: "center"}}>
+      <div>
         <div className="col-md-8">
           <img src={selectedProject[0].desktop} style={{width: "100%"}} />
         </div>
         <div className="col-md-4">
           <div style={{padding: "0em 2em 2em 2em"}}>
-            <h2 style={{fontWeight: "bolder"}}>{selectedProject[0].title}</h2>
+            <h2 style={{fontWeight: "bolder", margin: "0"}}>{selectedProject[0].title}</h2>
             <hr/>
             <p>
               <span className="project-description">Objective</span>
@@ -49,7 +49,7 @@ class WorkDetails extends React.Component {
 
   render(){
     return(
-      <section id="work-details" style={{margin: "15em 0em", opacity: "0"}}>
+      <section id="work-details" style={{margin: "15em 0em 0em 0em", opacity: "0"}}>
         <div className="row">
           {this.props.selectedProject != "" ? this.renderList(this.props.selectedProject) : null}
         </div>
