@@ -5,34 +5,41 @@ class Navigation extends React.Component {
     return(
       <section id="navigation">
         <nav className="navbar navbar-default navbar-fixed-top" style={{padding: "0em 0em"}}>
-          <div style={{width: "78%", margin: "0 auto", display: "flex", justifyContent: "space-between"}}>
+          <div className="container-fluid navigationStyle">
+            <div className="row">
 
+              <div className="col-md-2 col-xs-3">
                 <div className="navbar-header">
-                  <a href="#">
+                  <a href="/">
                     <img src={__dirname + "assets/logo.svg"} />
                   </a>
                 </div>
+              </div>
 
-
-                <div className="navbar-social-media" style={{fontSize: "1.2em",fontFamily: "Sarala", padding: "1em 0em 0em 1em", fontWeight: "bolder"}}>
-                  <a href="#banner"><span style={{padding: "0 1em"}}>ABOUT</span></a>
-                  <a href="#work-gallery"><span style={{padding: "0 1em"}}>PROJECTS</span></a>
-                  <a href="#footer"><span style={{padding: "0 1em"}}>CONTACT</span></a>
-                  <span style={{paddingRight: "0.8em"}}>|</span>
-                  <a href="https://www.linkedin.com/in/damontian1/" target="_blank">
-                    <i className="fa fa-linkedin" aria-hidden="true"></i> 
-                  </a>
-                  <a href="https://github.com/damontian1/" target="_blank">
-                    <i className="fa fa-github" aria-hidden="true"></i>
-                  </a>
-                  <a href="https://angel.co/damontian1" target="_blank">
-                    <i className="fa fa-angellist" aria-hidden="true"></i>
-                  </a>
-                  <a href="https://www.facebook.com/damontian1" target="_blank">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
+              <div className="col-md-8 col-md-offset-2 col-xs-9 text-right">
+                <div className="navbar-social-media">
+                  <a href="#banner"><span>ABOUT</span></a>
+                  <a href="#work-gallery"><span>PROJECTS</span></a>
+                  <a href="#footer"><span>CONTACT</span></a>
+                  <span className="hidden-xs hidden-sm">
+                    <span style={{paddingRight: "0.8em"}}>|</span>
+                    <a href="https://www.linkedin.com/in/damontian1" target="_blank">
+                      <i className="fa fa-linkedin" aria-hidden="true"></i> 
+                    </a>
+                    <a href="https://github.com/damontian1" target="_blank">
+                      <i className="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://angel.co/damontian1" target="_blank">
+                      <i className="fa fa-angellist" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/damontian1" target="_blank">
+                      <i className="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </span>
                 </div>
+              </div>
 
+            </div>
           </div>
         </nav>
       </section>
@@ -41,3 +48,5 @@ class Navigation extends React.Component {
 }
 
 export default Navigation;
+
+

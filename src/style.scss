@@ -105,9 +105,25 @@ section#footer {
   .footer-column p:first-child{
     padding: 2.5em 0em;
   }
+  .footer-column {
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+  }
 }
 
 section#navigation {
+  .navbar-social-media {
+    padding: 0;
+    font-size: 1.2em;
+    font-family: Sarala;
+    padding: 1em 0em 0em 1em;
+    font-weight: bolder;
+    span {
+      padding: 0 1em 0em 0em;
+    }
+  }
   a {
     color: black;
   }
@@ -123,10 +139,14 @@ section#navigation {
   }
   .navbar-header {
     font-size: 1em;
-    padding: 0.5em 0em;
+    padding: 0.5em 0em 0em 1em;
     a {
       color: black;
     }
+  }
+  .navigationStyle {
+    width: 80%;
+    margin: 0px auto;
   }
 }
 
@@ -184,5 +204,25 @@ section#work-details {
 @media only screen and(max-width: 993px){
   section#footer {
     text-align: center;
+  }
+  section#navigation {
+    .navbar-header {
+      img {
+        width: 153px
+      }
+    }
+    .navbar-social-media {
+      padding: 0;
+      font-size: 1em;
+      padding: 1em 0em 0em 1em;
+      font-weight: bolder;
+      span {
+        padding: 0 0.3em;
+      }
+    }
+    .navigationStyle {
+      width: 100%;
+      margin: 0px auto;
+    }
   }
 }

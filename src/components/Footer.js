@@ -7,6 +7,12 @@ class Footer extends React.Component {
         <footer>
           <div className="container">
             <div>
+              <div className="row">
+                <div className="col-md-offset-2 col-md-8 text-center">
+                  <h3 style={{fontWeight: "bolder"}}>EMAIL ME AT DAMONTIAN@LIVE.COM</h3>
+                  <hr/>
+                </div>
+              </div>
               <div className="row" style={{margin: "0 auto"}}>
                 <div className="col-md-4 col-sm-6 footer-column">
                   <p><strong>Site Info</strong></p>
@@ -36,10 +42,10 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-md-2 col-sm-6 text-center footer-column">
                   <p><strong>Connect with me</strong></p>
-                  <p>LinkedIn</p>
-                  <p>GitHub</p>
-                  <p>Angel.co</p>
-                  <p>FaceBook</p>
+                  <p><a href="https://www.linkedin.com/in/damontian1" target="_blank">LinkedIn</a></p>
+                  <p><a href="https://github.com/damontian1" target="_blank">GitHub</a></p>
+                  <p><a href="https://angel.co/damontian1" target="_blank">Angel.co</a></p>
+                  <p><a href="https://www.facebook.com/damontian1" target="_blank">FaceBook</a></p>
                 </div>
                 <div className="col-md-2">
                   <div></div>
