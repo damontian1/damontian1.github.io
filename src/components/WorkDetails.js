@@ -12,6 +12,7 @@ class WorkDetails extends React.Component {
           <img src={selectedProject[0].desktop} style={{width: "100%"}} />
         </div>
         <div className="col-md-4">
+          <div className="space hidden-md"></div>
           <div style={{padding: "0em 2em 2em 2em"}}>
             <h2 style={{fontWeight: "bolder", margin: "0"}}>{selectedProject[0].title}</h2>
             <hr/>

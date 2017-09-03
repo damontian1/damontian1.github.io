@@ -82,6 +82,7 @@ section#footer {
     border-left-style: none;
     outline: none;
     background: transparent;
+    border-radius: 0;
   }
   textarea {
     resize: none;
@@ -93,11 +94,13 @@ section#footer {
     outline: none;
     padding: 0.5em 0em;
     background: transparent;
+    border-radius: 0;
   }
   input[type="submit"] {
     background: transparent;
     border-color: red;
     border-width: 5px;
+    border-radius: 0;
   }
   input[type="submit"]:hover {
     font-weight: 900;
@@ -223,10 +226,14 @@ section#work-details {
         padding: 0 0.3em;
       }
     }
-
     .navigationStyle {
-      width: 100%;
+      width: 85%;
       margin: 0px auto;
+    }
+  }
+  section#work-details {
+    .space {
+      margin: 2.5em 0;
     }
   }
 }
