@@ -14261,7 +14261,7 @@ var Banner = function (_React$Component) {
             _react2.default.createElement("hr", null),
             _react2.default.createElement(
               "a",
-              { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=a279ae27-87d2-4257-bcf3-2e0a82e392da" },
+              { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=60203bc1-a9e7-45cf-932f-756228979b07" },
               "RESUME"
             ),
             _react2.default.createElement(
