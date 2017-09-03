@@ -114,6 +114,11 @@ section#footer {
 }
 
 section#navigation {
+  .navbar-header {
+    img {
+      max-width: 153px
+    }
+  }
   .navbar-social-media {
     padding: 0;
     font-size: 1.2em;
@@ -139,7 +144,7 @@ section#navigation {
   }
   .navbar-header {
     font-size: 1em;
-    padding: 0.5em 0em 0em 1em;
+    padding: 0.8em 0em 0em 1em;
     a {
       color: black;
     }
@@ -207,19 +212,18 @@ section#work-details {
   }
   section#navigation {
     .navbar-header {
-      img {
-        width: 153px
-      }
+      padding: 0.5em 0em 0em 1em;
     }
     .navbar-social-media {
       padding: 0;
       font-size: 1em;
-      padding: 1em 0em 0em 1em;
+      padding: 1.2em 0em 0em 1em;
       font-weight: bolder;
       span {
         padding: 0 0.3em;
       }
     }
+
     .navigationStyle {
       width: 100%;
       margin: 0px auto;
