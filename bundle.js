@@ -14088,14 +14088,8 @@ var fetchProjects = exports.fetchProjects = function fetchProjects() {
 
 var postProject = exports.postProject = function postProject() {
   _axios2.default.post("https://api.mlab.com/api/1/databases/damontian-v2/collections/projects?apiKey=8eIW7E_T5KozdXvYY-6Fyx_PnH3YARhs", {
-    title: "React Flux Contacts Dashboard",
-    objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    stack: ["ReactJS", "ExpressJS"],
-    art: "https://www.google.com",
-    desktop: "https://www.twitch.tv/exbc",
-    mobile: "https://www.twitch.tv/exbc",
-    github: "https://github.com/damontian1/react-flux-contacts-dashboard",
-    website: "https://rails-save-the-world-petfinder.herokuapp.com"
+    title: "More Projects Under Way..",
+    art: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955"
   });
 };
 
@@ -14109,6 +14103,8 @@ var postProject = exports.postProject = function postProject() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -14156,7 +14152,11 @@ var App = function (_React$Component) {
   function App() {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.handleClick = _this.handleClick.bind(_this);
+    _this.state = { selectedProject: "" };
+    return _this;
   }
 
   _createClass(App, [{
@@ -14165,9 +14165,17 @@ var App = function (_React$Component) {
       this.props.fetchProjects();
     }
   }, {
+    key: "handleClick",
+    value: function handleClick(id) {
+      this.setState({ selectedProject: id });
+      document.querySelector("#work-details").classList.remove("fade");
+      setTimeout(function () {
+        document.querySelector("#work-details").classList.add("fade");
+      }, 600);
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       return _react2.default.createElement(
         "div",
         null,
@@ -14176,8 +14184,8 @@ var App = function (_React$Component) {
           "div",
           { className: "container-fluid", style: { width: "80%", margin: "0 auto" } },
           _react2.default.createElement(_Banner2.default, null),
-          _react2.default.createElement(_WorkGallery2.default, { handleClick: this.handleClick }),
-          _react2.default.createElement(_WorkDetails2.default, null)
+          _react2.default.createElement(_WorkGallery2.default, _extends({ handleClick: this.handleClick }, this.props)),
+          _react2.default.createElement(_WorkDetails2.default, _extends({}, this.props, this.state))
         ),
         _react2.default.createElement(_Footer2.default, null)
       );
@@ -14238,7 +14246,7 @@ var Banner = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { id: "banner", style: { padding: "3em 0em" } },
+        { id: "banner", style: { padding: "5em 0em" } },
         _react2.default.createElement(
           "div",
           { className: "row" },
@@ -14250,20 +14258,15 @@ var Banner = function (_React$Component) {
               { style: { padding: "1em 0em 0em 0em", fontWeight: "bolder" } },
               "Hey, you found me! I\u2019m Damon, a Web Developer based in New York City and I love building beautiful and intuitive web applications."
             ),
-            _react2.default.createElement(
-              "h3",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ),
             _react2.default.createElement("hr", null),
             _react2.default.createElement(
-              "button",
-              { className: "btn btn-default" },
+              "a",
+              { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=a279ae27-87d2-4257-bcf3-2e0a82e392da" },
               "RESUME"
             ),
             _react2.default.createElement(
-              "button",
-              { className: "btn btn-default" },
+              "a",
+              { className: "btn btn-default", href: "#footer", style: { marginLeft: "1em" } },
               "SEND A MESSAGE"
             )
           )
@@ -14326,6 +14329,20 @@ var Footer = function (_React$Component) {
             _react2.default.createElement(
               "div",
               null,
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-offset-2 col-md-8 text-center" },
+                  _react2.default.createElement(
+                    "h3",
+                    { style: { fontWeight: "bolder" } },
+                    "EMAIL ME AT DAMONTIAN@LIVE.COM"
+                  ),
+                  _react2.default.createElement("hr", null)
+                )
+              ),
               _react2.default.createElement(
                 "div",
                 { className: "row", style: { margin: "0 auto" } },
@@ -14436,22 +14453,38 @@ var Footer = function (_React$Component) {
                   _react2.default.createElement(
                     "p",
                     null,
-                    "LinkedIn"
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank" },
+                      "LinkedIn"
+                    )
                   ),
                   _react2.default.createElement(
                     "p",
                     null,
-                    "GitHub"
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://github.com/damontian1", target: "_blank" },
+                      "GitHub"
+                    )
                   ),
                   _react2.default.createElement(
                     "p",
                     null,
-                    "Angel.co"
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://angel.co/damontian1", target: "_blank" },
+                      "Angel.co"
+                    )
                   ),
                   _react2.default.createElement(
                     "p",
                     null,
-                    "FaceBook"
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://www.facebook.com/damontian1", target: "_blank" },
+                      "FaceBook"
+                    )
                   )
                 ),
                 _react2.default.createElement(
@@ -14477,7 +14510,7 @@ exports.default = Footer;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(__dirname) {
+
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -14517,70 +14550,86 @@ var Navigation = function (_React$Component) {
           { className: "navbar navbar-default navbar-fixed-top", style: { padding: "0em 0em" } },
           _react2.default.createElement(
             "div",
-            { style: { width: "78%", margin: "0 auto", display: "flex", justifyContent: "space-between" } },
+            { className: "container-fluid navigationStyle" },
             _react2.default.createElement(
               "div",
-              { className: "navbar-header" },
+              { className: "row" },
               _react2.default.createElement(
-                "a",
-                { href: "#" },
-                _react2.default.createElement("img", { src: __dirname + "assets/logo.svg" })
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "navbar-social-media", style: { fontSize: "1.2em", fontFamily: "Sarala", padding: "1em 0em 0em 1em", fontWeight: "bolder" } },
-              _react2.default.createElement(
-                "a",
-                { href: "#banner" },
+                "div",
+                { className: "col-md-2 col-xs-3" },
                 _react2.default.createElement(
-                  "span",
-                  { style: { padding: "0 1em" } },
-                  "ABOUT"
+                  "div",
+                  { className: "navbar-header" },
+                  _react2.default.createElement(
+                    "a",
+                    { href: "/" },
+                    _react2.default.createElement("img", { src: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/logo%2Flogo.svg?alt=media&token=07019b3f-bd4a-426f-9f40-ab19d10f73d6" })
+                  )
                 )
               ),
               _react2.default.createElement(
-                "a",
-                { href: "#work-gallery" },
+                "div",
+                { className: "col-md-8 col-md-offset-2 col-xs-9 text-right" },
                 _react2.default.createElement(
-                  "span",
-                  { style: { padding: "0 1em" } },
-                  "PROJECTS"
+                  "div",
+                  { className: "navbar-social-media" },
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#banner" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "ABOUT"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#work-gallery" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "PROJECTS"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#footer" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "CONTACT"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "span",
+                    { className: "hidden-xs hidden-sm" },
+                    _react2.default.createElement(
+                      "span",
+                      { style: { paddingRight: "0.8em" } },
+                      "|"
+                    ),
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank" },
+                      _react2.default.createElement("i", { className: "fa fa-linkedin", "aria-hidden": "true" })
+                    ),
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://github.com/damontian1", target: "_blank" },
+                      _react2.default.createElement("i", { className: "fa fa-github", "aria-hidden": "true" })
+                    ),
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://angel.co/damontian1", target: "_blank" },
+                      _react2.default.createElement("i", { className: "fa fa-angellist", "aria-hidden": "true" })
+                    ),
+                    _react2.default.createElement(
+                      "a",
+                      { href: "https://www.facebook.com/damontian1", target: "_blank" },
+                      _react2.default.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
+                    )
+                  )
                 )
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "#footer" },
-                _react2.default.createElement(
-                  "span",
-                  { style: { padding: "0 1em" } },
-                  "CONTACT"
-                )
-              ),
-              _react2.default.createElement(
-                "span",
-                { style: { paddingRight: "0.8em" } },
-                "|"
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "https://www.linkedin.com/in/damontian1/", target: "_blank" },
-                _react2.default.createElement("i", { className: "fa fa-linkedin", "aria-hidden": "true" })
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "https://github.com/damontian1/", target: "_blank" },
-                _react2.default.createElement("i", { className: "fa fa-github", "aria-hidden": "true" })
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "https://angel.co/damontian1", target: "_blank" },
-                _react2.default.createElement("i", { className: "fa fa-angellist", "aria-hidden": "true" })
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "https://www.facebook.com/damontian1", target: "_blank" },
-                _react2.default.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
               )
             )
           )
@@ -14593,7 +14642,6 @@ var Navigation = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Navigation;
-/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ }),
 /* 142 */
@@ -14630,96 +14678,109 @@ var WorkDetails = function (_React$Component) {
   }
 
   _createClass(WorkDetails, [{
+    key: "renderList",
+    value: function renderList(id) {
+      var selectedProject = this.props.projects.filter(function (item) {
+        return item._id.$oid === id;
+      });
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "div",
+          { className: "col-md-8" },
+          _react2.default.createElement("img", { src: selectedProject[0].desktop, style: { width: "100%" } })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "col-md-4" },
+          _react2.default.createElement(
+            "div",
+            { style: { padding: "0em 2em 2em 2em" } },
+            _react2.default.createElement(
+              "h2",
+              { style: { fontWeight: "bolder", margin: "0" } },
+              selectedProject[0].title
+            ),
+            _react2.default.createElement("hr", null),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "span",
+                { className: "project-description" },
+                "Objective"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                selectedProject[0].objective
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "span",
+                { className: "project-description" },
+                "Website"
+              ),
+              _react2.default.createElement(
+                "a",
+                { href: selectedProject[0].website },
+                selectedProject[0].website
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "span",
+                { className: "project-description" },
+                "Github"
+              ),
+              _react2.default.createElement(
+                "a",
+                { href: selectedProject[0].github },
+                selectedProject[0].github
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "span",
+                { className: "project-description" },
+                "Tech Stack"
+              ),
+              selectedProject[0].stack.map(function (item, i) {
+                return _react2.default.createElement(
+                  "span",
+                  { className: "tag", key: i },
+                  item
+                );
+              })
+            ),
+            _react2.default.createElement("hr", null)
+          ),
+          _react2.default.createElement(
+            "div",
+            { style: { textAlign: "center", padding: "1em 0em" } },
+            _react2.default.createElement("img", { src: selectedProject[0].mobile, style: { width: "65%" } })
+          )
+        )
+      );
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { id: "work-details", style: { margin: "15em 0em", opacity: "0" } },
+        { id: "work-details", style: { margin: "15em 0em 0em 0em", opacity: "0" } },
         _react2.default.createElement(
           "div",
           { className: "row" },
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-8" },
-            _react2.default.createElement("img", { src: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftop-media.jpg?alt=media&token=ed942429-d396-4f81-9395-bce4bca8633b", style: { width: "100%" } })
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-4" },
-            _react2.default.createElement(
-              "div",
-              { style: { padding: "0em 2em 2em 2em" } },
-              _react2.default.createElement(
-                "h2",
-                { style: { fontWeight: "bolder" } },
-                "Save The World"
-              ),
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement(
-                "p",
-                null,
-                _react2.default.createElement(
-                  "span",
-                  { className: "project-description" },
-                  "Website"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "" },
-                  "https://github.com/damontian1/rails-truckly-food-truck"
-                )
-              ),
-              _react2.default.createElement(
-                "p",
-                null,
-                _react2.default.createElement(
-                  "span",
-                  { className: "project-description" },
-                  "Github"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "" },
-                  "https://github.com/damontian1/rails-truckly-food-truck"
-                )
-              ),
-              _react2.default.createElement(
-                "p",
-                null,
-                _react2.default.createElement(
-                  "span",
-                  { className: "project-description" },
-                  "Tech Stack"
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "tag" },
-                  "Ruby on Rails"
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "tag" },
-                  "JavaScript"
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "tag" },
-                  "JQuery"
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "tag" },
-                  "BootStrap"
-                )
-              ),
-              _react2.default.createElement("hr", null)
-            ),
-            _react2.default.createElement(
-              "div",
-              { style: { textAlign: "center", padding: "1em 0em" } },
-              _react2.default.createElement("img", { src: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec", style: { width: "80%" } })
-            )
-          )
+          this.props.selectedProject != "" ? this.renderList(this.props.selectedProject) : null
         )
       );
     }
@@ -14765,6 +14826,49 @@ var WorkGallery = function (_React$Component) {
   }
 
   _createClass(WorkGallery, [{
+    key: "renderList",
+    value: function renderList() {
+      var _this2 = this;
+
+      return this.props.projects.map(function (item, i) {
+        return _react2.default.createElement(
+          "div",
+          { key: i, className: "col-sm-6 col-md-4", style: { margin: "1em 0em" }, onClick: function onClick(id) {
+              _this2.props.handleClick(item._id.$oid);
+            } },
+          _react2.default.createElement(
+            "a",
+            { href: "#work-details" },
+            _react2.default.createElement(
+              "div",
+              { className: "project-cover-art", style: { width: "100%", position: "relative" } },
+              _react2.default.createElement("img", { src: item.art, style: { width: "100%" } }),
+              _react2.default.createElement(
+                "div",
+                { className: "overlay" },
+                _react2.default.createElement(
+                  "p",
+                  { className: "overlay-text" },
+                  item.stack ? item.stack.map(function (item) {
+                    return item + ", ";
+                  }) : null
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            _react2.default.createElement(
+              "strong",
+              null,
+              item.title
+            )
+          )
+        );
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -14812,202 +14916,32 @@ var WorkGallery = function (_React$Component) {
               _react2.default.createElement("input", { type: "text", placeholder: "Search Projects by Technology Used", style: { padding: "6px 12px", borderRadius: "4px", border: "1px solid lightgray" } })
             )
           ),
+          this.renderList(),
           _react2.default.createElement(
             "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" }, onClick: this.props.handleClick },
+            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
             _react2.default.createElement(
               "a",
               { href: "#work-details" },
               _react2.default.createElement(
                 "div",
                 { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/save-the-world-banner.png", style: { width: "100%" } }),
+                _react2.default.createElement("img", { src: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955", style: { width: "100%" } }),
                 _react2.default.createElement(
                   "div",
                   { className: "overlay" },
-                  _react2.default.createElement(
-                    "p",
-                    { className: "overlay-text" },
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                  )
+                  _react2.default.createElement("p", { className: "overlay-text" })
                 )
               )
             ),
             _react2.default.createElement(
-              "h4",
+              "h5",
               null,
               _react2.default.createElement(
                 "strong",
                 null,
-                "SAVE THE WORLD"
+                "More Projects Under Way..."
               )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/truckly-banner.png", style: { width: "100%" } }),
-                _react2.default.createElement(
-                  "div",
-                  { className: "overlay" },
-                  _react2.default.createElement(
-                    "p",
-                    { className: "overlay-text" },
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "TRUCKLY"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/youtube-top-media-banner.jpg", style: { width: "100%" } }),
-                _react2.default.createElement(
-                  "div",
-                  { className: "overlay" },
-                  _react2.default.createElement(
-                    "p",
-                    { className: "overlay-text" },
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "YOUTUBE TOP MEDIA"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/test2.jpg", style: { width: "100%" } }),
-                _react2.default.createElement(
-                  "div",
-                  { className: "overlay" },
-                  _react2.default.createElement(
-                    "p",
-                    { className: "overlay-text" },
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "CONTACTS DASHBOARD"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/save-the-world-banner.png", style: { width: "100%" } })
-              )
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "COLBIE'S STYLE"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "../../assets/more-projects.png", style: { width: "100%" } })
-              )
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "MORE PROJECTS UNDER WAY.."
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             )
           )
         )
@@ -15959,7 +15893,7 @@ exports = module.exports = __webpack_require__(148)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\nbody {\n  padding-top: 7em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  transition: 0.75s ease-in-out; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding-top: 80px; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 3em;\n    height: 100%;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 3em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.5em 0em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding-top: 80px; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    font-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 7em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  transition: 1s ease-in-out; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding-top: 80px; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 100%;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 3em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding-top: 80px; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    font-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header img {\n    width: 153px; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; } }\n", ""]);
 
 // exports
 

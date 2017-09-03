@@ -11,7 +11,7 @@ class Navigation extends React.Component {
               <div className="col-md-2 col-xs-3">
                 <div className="navbar-header">
                   <a href="/">
-                    <img src={__dirname + "assets/logo.svg"} />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/logo%2Flogo.svg?alt=media&token=07019b3f-bd4a-426f-9f40-ab19d10f73d6"/>
                   </a>
                 </div>
               </div>
