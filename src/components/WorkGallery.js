@@ -3,19 +3,21 @@ import React from "react";
 class WorkGallery extends React.Component {
   
   renderList(){
-    var filtered = this.props.projects.filter(item => item.stack.includes(this.props.filteredInput));
+    var filtered = this.props.projects.filter(item => item.stack.includes(this.props.filteredInput ? this.props.filteredInput : "JavaScript"));
     return filtered.map((item, i) => {
       return(
         <div key ={i} className="col-sm-6 col-md-4" style={{margin: "1em 0em"}} onClick={(id) => {this.props.handleClick(item._id.$oid)}}>
-          <a href="#work-details">
+          <a href="#work-details" style={{color: "black", textDecoration: "underline"}}>
             <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
               <img src={item.art} style={{width: "100%"}} />
               <div className="overlay">
                 <p className="overlay-text">{item.stack ? item.stack.map(item => `${item}, `) : null}</p>
               </div>
+              <h5><strong>{item.title}</strong><i className="fa fa-external-link" aria-hidden="true" style={{padding: "0.5em"}}></i></h5>
             </div>
           </a>
-          <h5><strong>{item.title}</strong></h5>
+          
+
         </div>
       )
     })
