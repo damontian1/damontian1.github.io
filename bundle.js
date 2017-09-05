@@ -14155,7 +14155,8 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.handleClick = _this.handleClick.bind(_this);
-    _this.state = { selectedProject: "" };
+    _this.handleFilter = _this.handleFilter.bind(_this);
+    _this.state = { selectedProject: "", filteredInput: "JavaScript" };
     return _this;
   }
 
@@ -14174,6 +14175,17 @@ var App = function (_React$Component) {
       }, 600);
     }
   }, {
+    key: "handleFilter",
+    value: function handleFilter(e) {
+      var buttons = document.querySelectorAll("section#work-gallery button");
+      buttons.forEach(function (item) {
+        return item.classList.add("btn-default");
+      });
+      var input = e.target.textContent;
+      input = input == "All" ? "JavaScript" : input;
+      this.setState({ filteredInput: input });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -14184,7 +14196,7 @@ var App = function (_React$Component) {
           "div",
           { className: "container-fluid", style: { width: "80%", margin: "0 auto" } },
           _react2.default.createElement(_Banner2.default, null),
-          _react2.default.createElement(_WorkGallery2.default, _extends({ handleClick: this.handleClick }, this.props)),
+          _react2.default.createElement(_WorkGallery2.default, _extends({ handleClick: this.handleClick, handleFilter: this.handleFilter }, this.props, this.state)),
           _react2.default.createElement(_WorkDetails2.default, _extends({}, this.props, this.state))
         ),
         _react2.default.createElement(_Footer2.default, null)
@@ -14260,14 +14272,28 @@ var Banner = function (_React$Component) {
             ),
             _react2.default.createElement("hr", null),
             _react2.default.createElement(
-              "a",
-              { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=60203bc1-a9e7-45cf-932f-756228979b07" },
-              "RESUME"
+              "h4",
+              { style: { maxWidth: "90%", margin: "0 auto", padding: "0 0 1em", lineHeight: "25px" } },
+              _react2.default.createElement(
+                "strong",
+                null,
+                "My Top Skills:"
+              ),
+              " HTML/CSS, JavaScript, React.js, Node.js/Express.js, Ruby, Ruby on Rails, PostgreSQL, WordPress, Git/Github, Bootstrap "
             ),
             _react2.default.createElement(
-              "a",
-              { className: "btn btn-default", href: "#footer", style: { marginLeft: "1em" } },
-              "SEND A MESSAGE"
+              "div",
+              null,
+              _react2.default.createElement(
+                "a",
+                { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=60203bc1-a9e7-45cf-932f-756228979b07" },
+                "RESUME"
+              ),
+              _react2.default.createElement(
+                "a",
+                { className: "btn btn-default", href: "#footer", style: { marginLeft: "1em" } },
+                "SEND A MESSAGE"
+              )
             )
           )
         )
@@ -14728,7 +14754,7 @@ var WorkDetails = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "a",
-                { href: selectedProject[0].website },
+                { href: selectedProject[0].website, target: "_blank" },
                 selectedProject[0].website
               )
             ),
@@ -14742,7 +14768,7 @@ var WorkDetails = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "a",
-                { href: selectedProject[0].github },
+                { href: selectedProject[0].github, target: "_blank" },
                 selectedProject[0].github
               )
             ),
@@ -14831,7 +14857,10 @@ var WorkGallery = function (_React$Component) {
     value: function renderList() {
       var _this2 = this;
 
-      return this.props.projects.map(function (item, i) {
+      var filtered = this.props.projects.filter(function (item) {
+        return item.stack.includes(_this2.props.filteredInput);
+      });
+      return filtered.map(function (item, i) {
         return _react2.default.createElement(
           "div",
           { key: i, className: "col-sm-6 col-md-4", style: { margin: "1em 0em" }, onClick: function onClick(id) {
@@ -14886,7 +14915,7 @@ var WorkGallery = function (_React$Component) {
               null,
               _react2.default.createElement(
                 "button",
-                { type: "button", className: "btn btn-default" },
+                { type: "button", className: "btn", onClick: this.props.handleFilter },
                 "All"
               ),
               _react2.default.createElement(
@@ -14896,8 +14925,8 @@ var WorkGallery = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "button",
-                { type: "button", className: "btn btn-default" },
-                "Ruby"
+                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
+                "Ruby on Rails"
               ),
               _react2.default.createElement(
                 "span",
@@ -14906,15 +14935,24 @@ var WorkGallery = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "button",
-                { type: "button", className: "btn btn-default" },
-                "JavaScript"
+                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
+                "React.js"
               ),
               _react2.default.createElement(
                 "span",
                 null,
                 " "
               ),
-              _react2.default.createElement("input", { type: "text", placeholder: "Search Projects by Technology Used", style: { padding: "6px 12px", borderRadius: "4px", border: "1px solid lightgray" } })
+              _react2.default.createElement(
+                "button",
+                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
+                "WordPress"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                " "
+              )
             )
           ),
           this.renderList(),
@@ -15894,7 +15932,7 @@ exports = module.exports = __webpack_require__(148)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 7em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  transition: 1s ease-in-out; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding-top: 80px; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 100%;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 3em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 153px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding-top: 80px; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    font-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 7em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding-top: 80px; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 100%;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 3em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 153px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding-top: 80px; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    font-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; } }\n\n@media only screen and (max-width: 500px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; } }\n", ""]);
 
 // exports
 

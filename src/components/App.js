@@ -15,7 +15,8 @@ class App extends React.Component {
   constructor(){
     super();
     this.handleClick = this.handleClick.bind(this);
-    this.state = {selectedProject: ""}
+    this.handleFilter = this.handleFilter.bind(this);
+    this.state = {selectedProject: "", filteredInput: "JavaScript"}
   }
   
   componentDidMount(){
@@ -30,13 +31,21 @@ class App extends React.Component {
     }, 600)
   }
 
+  handleFilter(e){
+    var buttons = document.querySelectorAll("section#work-gallery button")
+    buttons.forEach(item => item.classList.add("btn-default"))
+    var input = e.target.textContent;
+    input = input == "All" ? "JavaScript" : input;
+    this.setState({filteredInput: input})
+  }
+
   render(){
     return(
       <div>
         <Navigation />
         <div className="container-fluid" style={{width: "80%", margin: "0 auto"}}>
           <Banner />
-          <WorkGallery handleClick={this.handleClick} {...this.props} />
+          <WorkGallery handleClick={this.handleClick} handleFilter={this.handleFilter} {...this.props} {...this.state} />
           <WorkDetails {...this.props} {...this.state} />
         </div>
         <Footer />

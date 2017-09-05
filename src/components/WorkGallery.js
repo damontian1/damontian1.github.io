@@ -3,7 +3,8 @@ import React from "react";
 class WorkGallery extends React.Component {
   
   renderList(){
-    return this.props.projects.map((item, i) => {
+    var filtered = this.props.projects.filter(item => item.stack.includes(this.props.filteredInput));
+    return filtered.map((item, i) => {
       return(
         <div key ={i} className="col-sm-6 col-md-4" style={{margin: "1em 0em"}} onClick={(id) => {this.props.handleClick(item._id.$oid)}}>
           <a href="#work-details">
@@ -26,13 +27,14 @@ class WorkGallery extends React.Component {
         <div className="row">
           <div className="col-md-12">
             <div>
-              <button type="button" className="btn btn-default">All</button>
+              <button type="button" className="btn" onClick={this.props.handleFilter}>All</button>
               <span> </span>
-              <button type="button" className="btn btn-default">Ruby</button>
+              <button type="button" className="btn btn-default" onClick={this.props.handleFilter}>Ruby on Rails</button>
               <span> </span>
-              <button type="button" className="btn btn-default">JavaScript</button>
+              <button type="button" className="btn btn-default" onClick={this.props.handleFilter}>React.js</button>
               <span> </span>
-              <input type="text" placeholder="Search Projects by Technology Used" style={{padding: "6px 12px", borderRadius: "4px", border: "1px solid lightgray"}}/>
+              <button type="button" className="btn btn-default" onClick={this.props.handleFilter}>WordPress</button>
+              <span> </span>
             </div>
           </div>
           {this.renderList()}

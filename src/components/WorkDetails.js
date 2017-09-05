@@ -22,11 +22,11 @@ class WorkDetails extends React.Component {
             </p>
             <p>
               <span className="project-description">Website</span>
-              <a href={selectedProject[0].website}>{selectedProject[0].website}</a>
+              <a href={selectedProject[0].website} target="_blank">{selectedProject[0].website}</a>
             </p>
             <p>
               <span className="project-description">Github</span>
-              <a href={selectedProject[0].github}>{selectedProject[0].github}</a>
+              <a href={selectedProject[0].github} target="_blank">{selectedProject[0].github}</a>
             </p>
             <p>
               <span className="project-description">Tech Stack</span>

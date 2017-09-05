@@ -27,7 +27,9 @@ body {
 /***********************/
 /* bootstrap overrides */
 /***********************/
-
+.btn {
+  border: 1px solid #adadad;;
+}
 .navbar {
   border-radius: 0;
 }
@@ -41,7 +43,10 @@ body {
   opacity: 1 !important;
   transition: 1s ease-in-out;
 }
-
+section#work-gallery button:focus {
+  background: rgb(192, 192, 192);
+  outline: 0;
+}
 /***********************/
 /*       desktop       */
 /***********************/
@@ -234,6 +239,15 @@ section#work-details {
   section#work-details {
     .space {
       margin: 2.5em 0;
+    }
+  }
+}
+
+@media only screen and(max-width: 500px){
+  section#navigation {
+    .navigationStyle {
+      width: 100%;
+      margin: 0px auto;
     }
   }
 }
