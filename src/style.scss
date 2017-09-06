@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 body {
-  padding-top: 7em;
+  padding-top: 5em;
   font-family: "Sarala";
 }
 // .navbar.navbar-slideup {
@@ -41,6 +41,7 @@ body {
 }
 #work-details.fade {
   opacity: 1 !important;
+  margin-bottom: 5em;
   transition: 1s ease-in-out;
 }
 section#work-gallery button:focus {
@@ -51,7 +52,7 @@ section#work-gallery button:focus {
 /*       desktop       */
 /***********************/
 section#work-gallery {
-  padding-top: 80px;
+  padding: 5em 0em 5em 0em;
   .overlay {
     position: absolute;
     top: 0;
@@ -59,22 +60,27 @@ section#work-gallery {
     justify-content: center;
     align-items: center;
     padding: 2em;
-    height: 88%;
+    height: 10px;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     opacity: 0;
     text-align: center;
   }
+  .overlay-text {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
   .project-cover-art:hover .overlay {
     opacity: 1;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in;
     filter: blur(0px);
   }
 }
 section#footer {
   background: #f7f7f7;
-  margin-top: 3em;
+  margin-top: 0em;
   footer{  
     border-top: 1px solid #e7e7e7;
     padding: 0.3em 0em 1em 0em;
@@ -170,7 +176,7 @@ section#banner {
 }
 
 section#work-details {
-  padding-top: 80px;
+  padding: 5em 0em 0em 0em;
   .project-description {
     display: block;
     padding: 0.2em 3em;

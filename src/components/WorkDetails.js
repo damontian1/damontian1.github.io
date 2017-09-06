@@ -50,7 +50,7 @@ class WorkDetails extends React.Component {
 
   render(){
     return(
-      <section id="work-details" style={{margin: "15em 0em 0em 0em", opacity: "0"}}>
+      <section id="work-details" style={{opacity: "0"}}>
         <div className="row">
           {this.props.selectedProject != "" ? this.renderList(this.props.selectedProject) : null}
         </div>

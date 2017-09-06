@@ -25,7 +25,7 @@ class WorkGallery extends React.Component {
 
   render(){
     return(
-      <section id="work-gallery" style={{margin: "0em 0em 15em 0em"}}>
+      <section id="work-gallery" style={{margin: "0em 0em 0em 0em"}}>
         <div className="row">
           <div className="col-md-12">
             <div>
