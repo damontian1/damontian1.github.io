@@ -10,7 +10,7 @@ class Banner extends React.Component {
               <hr/>
               <h4 style={{maxWidth: "90%", margin: "0 auto", padding: "0 0 1em", lineHeight: "25px"}}><strong>My Top Skills:</strong> HTML/CSS, JavaScript, React.js, Node.js/Express.js, Ruby, Ruby on Rails, PostgreSQL, WordPress, Git/Github, Bootstrap </h4>
               <div>
-                <a className="btn btn-default" href="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=cd3240a2-c78f-4e64-a921-3ae42d768d01">RESUME</a>
+                <a className="btn btn-default" href="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.doc?alt=media&token=dc20a6e0-af8a-4689-8757-6aa2682a4e77">RESUME</a>
                 <a className="btn btn-default" href="#footer" style={{marginLeft: "1em"}}>SEND A MESSAGE</a>
               </div>
 
