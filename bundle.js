@@ -14286,7 +14286,7 @@ var Banner = function (_React$Component) {
               null,
               _react2.default.createElement(
                 "a",
-                { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=60203bc1-a9e7-45cf-932f-756228979b07" },
+                { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=cd3240a2-c78f-4e64-a921-3ae42d768d01" },
                 "RESUME"
               ),
               _react2.default.createElement(
@@ -14953,37 +14953,20 @@ var WorkGallery = function (_React$Component) {
                 "span",
                 null,
                 " "
+              ),
+              _react2.default.createElement(
+                "button",
+                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
+                "Flask"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                " "
               )
             )
           ),
-          this.renderList(),
-          _react2.default.createElement(
-            "div",
-            { className: "col-sm-6 col-md-4", style: { margin: "1em 0em" } },
-            _react2.default.createElement(
-              "a",
-              { href: "#work-details" },
-              _react2.default.createElement(
-                "div",
-                { className: "project-cover-art", style: { width: "100%", position: "relative" } },
-                _react2.default.createElement("img", { src: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955", style: { width: "100%" } }),
-                _react2.default.createElement(
-                  "div",
-                  { className: "overlay" },
-                  _react2.default.createElement("p", { className: "overlay-text" })
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "h5",
-              null,
-              _react2.default.createElement(
-                "strong",
-                null,
-                "More Projects Under Way..."
-              )
-            )
-          )
+          this.renderList()
         )
       );
     }

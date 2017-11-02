@@ -37,20 +37,23 @@ class WorkGallery extends React.Component {
               <span> </span>
               <button type="button" className="btn btn-default" onClick={this.props.handleFilter}>WordPress</button>
               <span> </span>
+              <button type="button" className="btn btn-default" onClick={this.props.handleFilter}>Flask</button>
+              <span> </span>
             </div>
           </div>
           {this.renderList()}
+          {/* this is a placeholder poster art that shows more projects under way
           <div className="col-sm-6 col-md-4" style={{margin: "1em 0em"}}>
-          <a href="#work-details">
-            <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
-              <img src="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955" style={{width: "100%"}} />
-              <div className="overlay">
-                <p className="overlay-text"></p>
+            <a href="#work-details">
+              <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
+                <img src="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955" style={{width: "100%"}} />
+                <div className="overlay">
+                  <p className="overlay-text"></p>
+                </div>
               </div>
-            </div>
-          </a>
-          <h5><strong>More Projects Under Way...</strong></h5>
-        </div>
+            </a>
+            <h5><strong>More Projects Under Way...</strong></h5>
+          </div>*/}
         </div>
       </section>
     )

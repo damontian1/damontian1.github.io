@@ -4,7 +4,7 @@
   "description": "This is version 2 of www.damontian.com with a new design and built with React.js, React-router, Redux, and Express.js/Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/webpack/bin/webpack.js && node server.js",
+    "start": "node node_modules/webpack/bin/webpack.js",
     "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "dependencies": {
