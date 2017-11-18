@@ -11,7 +11,7 @@ class WorkGallery extends React.Component {
             <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
               <img src={item.art} style={{width: "100%"}} />
               <div className="overlay">
-                <p className="overlay-text">{item.stack ? item.stack.map(item => `${item}, `) : null}</p>
+                <p className="overlay-text">{item.stack ? item.stack.map(item => `${item}, `) : null}etc..</p>
               </div>
               <h5><strong>{item.title}</strong><i className="fa fa-external-link" aria-hidden="true" style={{padding: "0.5em"}}></i></h5>
             </div>
