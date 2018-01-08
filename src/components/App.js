@@ -16,27 +16,32 @@ class App extends React.Component {
     super();
     this.handleClick = this.handleClick.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
-    this.state = {selectedProject: "", filteredInput: "JavaScript"}
+    this.state = {selectedProject: "", filteredInput: "Main"}
   }
   
   componentDidMount(){
     this.props.fetchProjects();
   }
 
-  handleClick(id){
+  handleClick(id, item){
     this.setState({selectedProject: id})
     document.querySelector("#work-details").classList.remove("fade")
-    setTimeout(() => {
-      document.querySelector("#work-details").classList.add("fade")
-    }, 600)
+    if (this.state.filteredInput == "Main") {
+      setTimeout(() => {
+        document.querySelector("#work-details").classList.add("fade")
+      }, 600)
+    }
+    else {
+      window.open('https://www.freecodecamp.org/damontian1'); 
+    }
   }
 
   handleFilter(e){
     var buttons = document.querySelectorAll("section#work-gallery button")
-    buttons.forEach(item => item.classList.add("btn-default"))
+    buttons.forEach(item => item.classList.add("btn-default"));
     var input = e.target.textContent;
-    input = input == "All" ? "JavaScript" : input;
-    this.setState({filteredInput: input})
+    input = input == "Main Projects" ? "Main" : input;
+    this.setState({filteredInput: input});
   }
 
   render(){

@@ -14156,7 +14156,7 @@ var App = function (_React$Component) {
 
     _this.handleClick = _this.handleClick.bind(_this);
     _this.handleFilter = _this.handleFilter.bind(_this);
-    _this.state = { selectedProject: "", filteredInput: "JavaScript" };
+    _this.state = { selectedProject: "", filteredInput: "Main" };
     return _this;
   }
 
@@ -14167,12 +14167,16 @@ var App = function (_React$Component) {
     }
   }, {
     key: "handleClick",
-    value: function handleClick(id) {
+    value: function handleClick(id, item) {
       this.setState({ selectedProject: id });
       document.querySelector("#work-details").classList.remove("fade");
-      setTimeout(function () {
-        document.querySelector("#work-details").classList.add("fade");
-      }, 600);
+      if (this.state.filteredInput == "Main") {
+        setTimeout(function () {
+          document.querySelector("#work-details").classList.add("fade");
+        }, 600);
+      } else {
+        window.open('https://www.freecodecamp.org/damontian1');
+      }
     }
   }, {
     key: "handleFilter",
@@ -14182,7 +14186,7 @@ var App = function (_React$Component) {
         return item.classList.add("btn-default");
       });
       var input = e.target.textContent;
-      input = input == "All" ? "JavaScript" : input;
+      input = input == "Main Projects" ? "Main" : input;
       this.setState({ filteredInput: input });
     }
   }, {
@@ -14286,7 +14290,7 @@ var Banner = function (_React$Component) {
               null,
               _react2.default.createElement(
                 "a",
-                { className: "btn btn-default", href: "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/documents%2Fdamon-tian-resume-v2.pdf?alt=media&token=cd3240a2-c78f-4e64-a921-3ae42d768d01" },
+                { className: "btn btn-default", href: "https://www.dropbox.com/s/ptqq5goeer7v0j8/damon-tian-resume-v3.pdf?dl=0" },
                 "RESUME"
               ),
               _react2.default.createElement(
@@ -14858,7 +14862,7 @@ var WorkGallery = function (_React$Component) {
       var _this2 = this;
 
       var filtered = this.props.projects.filter(function (item) {
-        return item.stack.includes(_this2.props.filteredInput ? _this2.props.filteredInput : "JavaScript");
+        return item.tag.includes(_this2.props.filteredInput ? _this2.props.filteredInput : "Main");
       });
       return filtered.map(function (item, i) {
         return _react2.default.createElement(
@@ -14881,7 +14885,8 @@ var WorkGallery = function (_React$Component) {
                   { className: "overlay-text" },
                   item.stack ? item.stack.map(function (item) {
                     return item + ", ";
-                  }) : null
+                  }) : null,
+                  "etc.."
                 )
               ),
               _react2.default.createElement(
@@ -14917,7 +14922,7 @@ var WorkGallery = function (_React$Component) {
               _react2.default.createElement(
                 "button",
                 { type: "button", className: "btn", onClick: this.props.handleFilter },
-                "All"
+                "Main Projects"
               ),
               _react2.default.createElement(
                 "span",
@@ -14958,6 +14963,16 @@ var WorkGallery = function (_React$Component) {
                 "button",
                 { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
                 "Flask"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                " "
+              ),
+              _react2.default.createElement(
+                "button",
+                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
+                "Side Projects"
               ),
               _react2.default.createElement(
                 "span",
@@ -15916,7 +15931,7 @@ exports = module.exports = __webpack_require__(148)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .overlay-text {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 153px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    font-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; } }\n\n@media only screen and (max-width: 500px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"] {\n    background: transparent;\n    border-color: red;\n    border-width: 5px;\n    border-radius: 0; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 153px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; } }\n\n@media only screen and (max-width: 500px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; } }\n", ""]);
 
 // exports
 

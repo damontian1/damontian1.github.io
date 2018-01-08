@@ -67,11 +67,6 @@ section#work-gallery {
     opacity: 0;
     text-align: center;
   }
-  .overlay-text {
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-  }
   .project-cover-art:hover .overlay {
     opacity: 1;
     transition: 0.5s ease-in;
@@ -190,7 +185,7 @@ section#work-details {
     font-weight: bolder;
   }
   a {
-    font-decoration: none;
+    text-decoration: none;
     color: black;
   }
   p {
