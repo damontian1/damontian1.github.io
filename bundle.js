@@ -14173,14 +14173,9 @@ var App = function (_React$Component) {
       this.setState({ selectedProject: id });
       document.querySelector("#work-details").classList.remove("fade");
       if (id === freeCodeCampId || id === freelanceProjectsId) {
-<<<<<<< HEAD
-        window.location = "/";
         if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1');
         if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/');
-=======
-        if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1', "_self");
-        if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/', "_self");
->>>>>>> e4b35b18a48be5d3fa9269215b00f34b25c7426a
+        window.location = "/";
       } else {
         setTimeout(function () {
           document.querySelector("#work-details").classList.add("fade");
