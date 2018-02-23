@@ -29,8 +29,9 @@ class App extends React.Component {
     this.setState({selectedProject: id})
     document.querySelector("#work-details").classList.remove("fade")
     if (id === freeCodeCampId || id === freelanceProjectsId) {
-      if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1', "_parent"); 
-      if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/', "_parent"); 
+      if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1'); 
+      if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/');
+      window.location = "/";
     }
     else {
       setTimeout(() => {
