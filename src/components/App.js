@@ -24,15 +24,18 @@ class App extends React.Component {
   }
 
   handleClick(id, item){
+    const freeCodeCampId = "5a53b514734d1d388d189126";
+    const freelanceProjectsId = "5a8f5049f36d286fea352cad";
     this.setState({selectedProject: id})
     document.querySelector("#work-details").classList.remove("fade")
-    if (this.state.filteredInput == "Main") {
+    if (id === freeCodeCampId || id === freelanceProjectsId) {
+      if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1'); 
+      if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/'); 
+    }
+    else {
       setTimeout(() => {
         document.querySelector("#work-details").classList.add("fade")
       }, 600)
-    }
-    else {
-      window.open('https://www.freecodecamp.org/damontian1'); 
     }
   }
 

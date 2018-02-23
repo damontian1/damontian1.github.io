@@ -14168,14 +14168,17 @@ var App = function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick(id, item) {
+      var freeCodeCampId = "5a53b514734d1d388d189126";
+      var freelanceProjectsId = "5a8f5049f36d286fea352cad";
       this.setState({ selectedProject: id });
       document.querySelector("#work-details").classList.remove("fade");
-      if (this.state.filteredInput == "Main") {
+      if (id === freeCodeCampId || id === freelanceProjectsId) {
+        if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1');
+        if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/');
+      } else {
         setTimeout(function () {
           document.querySelector("#work-details").classList.add("fade");
         }, 600);
-      } else {
-        window.open('https://www.freecodecamp.org/damontian1');
       }
     }
   }, {
