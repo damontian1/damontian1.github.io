@@ -1,10 +1,10 @@
 import React from "react";
 
 class Navigation extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <section id="navigation">
-        <nav className="navbar navbar-default navbar-fixed-top" style={{padding: "0em 0em"}}>
+        <nav className="navbar navbar-default navbar-fixed-top" style={{ padding: "0em 0em" }}>
           <div className="container-fluid navigationStyle">
             <div className="row">
 
@@ -23,7 +23,7 @@ class Navigation extends React.Component {
                   <a href="#footer"><span>CONTACT</span></a>
                   <span className="hidden-xs hidden-sm">
                     <span style={{paddingRight: "0.8em"}}>|</span>
-                    <a href="https://www.linkedin.com/in/damontian1" target="_blank">
+                    <a href="https://www.linkedin.com/in/damontian1" target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-linkedin" aria-hidden="true"></i> 
                     </a>
                     <a href="https://github.com/damontian1" target="_blank">
@@ -43,10 +43,8 @@ class Navigation extends React.Component {
           </div>
         </nav>
       </section>
-    )
+    );
   }
 }
 
 export default Navigation;
-
-

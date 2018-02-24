@@ -1,13 +1,14 @@
 import React from "react";
 
 class WorkGallery extends React.Component {
-  renderList(){
-      var filtered = this.props.projects
-        .filter(item => item.tag.includes(this.props.filteredInput ? this.props.filteredInput : "Main"))
+  renderList() {
+    var filtered = this.props.projects
+      .filter(item => item.tag.includes(this.props.filteredInput ? this.props.filteredInput : "Main"))
     return filtered.map((item, i) => {
-      return(
+      var isExternalLink = item.tag.includes("Side Projects") ? item.website : "#work-details";
+      return (
         <div key ={i} className="col-sm-6 col-md-4" style={{margin: "1em 0em"}} onClick={(id) => {this.props.handleClick(item._id.$oid)}}>
-          <a href="#work-details" style={{color: "black", textDecoration: "underline"}}>
+          <a href={isExternalLink} style={{color: "black", textDecoration: "underline"}}>
             <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
               <img src={item.art} style={{width: "100%"}} />
               <div className="overlay">
@@ -21,8 +22,8 @@ class WorkGallery extends React.Component {
     })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <section id="work-gallery" style={{margin: "0em 0em 0em 0em"}}>
         <div className="row">
           <div className="col-md-12">
@@ -42,21 +43,9 @@ class WorkGallery extends React.Component {
             </div>
           </div>
           {this.renderList()}
-          {/* this is a placeholder poster art that shows more projects under way
-          <div className="col-sm-6 col-md-4" style={{margin: "1em 0em"}}>
-            <a href="#work-details">
-              <div className="project-cover-art" style={{width: "100%", position: "relative"}}>
-                <img src="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955" style={{width: "100%"}} />
-                <div className="overlay">
-                  <p className="overlay-text"></p>
-                </div>
-              </div>
-            </a>
-            <h5><strong>More Projects Under Way...</strong></h5>
-          </div>*/}
         </div>
       </section>
-    )
+    );
   }
 }
 

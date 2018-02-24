@@ -13133,42 +13133,6 @@ module.exports = g;
 "use strict";
 
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(147);
-if (typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {};
-options.transform = transform;
-// add the styles to the DOM
-var update = __webpack_require__(301)(content, options);
-if (content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if (false) {
-	// When the styles change, update the <style> tags
-	if (!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.scss", function () {
-			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.scss");
-			if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function () {
-		update();
-	});
-}
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
@@ -13212,6 +13176,37 @@ _reactDom2.default.render(_react2.default.createElement(
     )
   )
 ), document.getElementById("root"));
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(147);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(301)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.scss", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
 /* 119 */
@@ -14168,19 +14163,11 @@ var App = function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick(id, item) {
-      var freeCodeCampId = "5a53b514734d1d388d189126";
-      var freelanceProjectsId = "5a8f5049f36d286fea352cad";
       this.setState({ selectedProject: id });
       document.querySelector("#work-details").classList.remove("fade");
-      if (id === freeCodeCampId || id === freelanceProjectsId) {
-        if (id === freeCodeCampId) window.open('https://www.freecodecamp.org/damontian1');
-        if (id === freelanceProjectsId) window.open('https://codepen.io/collection/XevYpy/');
-        window.location = "/";
-      } else {
-        setTimeout(function () {
-          document.querySelector("#work-details").classList.add("fade");
-        }, 600);
-      }
+      setTimeout(function () {
+        document.querySelector("#work-details").classList.add("fade");
+      }, 600);
     }
   }, {
     key: "handleFilter",
@@ -14190,7 +14177,7 @@ var App = function (_React$Component) {
         return item.classList.add("btn-default");
       });
       var input = e.target.textContent;
-      input = input == "Main Projects" ? "Main" : input;
+      input = input === "Main Projects" ? "Main" : input;
       this.setState({ filteredInput: input });
     }
   }, {
@@ -14489,7 +14476,7 @@ var Footer = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                       "a",
-                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank" },
+                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank", rel: "noopener noreferrer" },
                       "LinkedIn"
                     )
                   ),
@@ -14498,7 +14485,7 @@ var Footer = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                       "a",
-                      { href: "https://github.com/damontian1", target: "_blank" },
+                      { href: "https://github.com/damontian1", target: "_blank", rel: "noopener noreferrer" },
                       "GitHub"
                     )
                   ),
@@ -14507,7 +14494,7 @@ var Footer = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                       "a",
-                      { href: "https://angel.co/damontian1", target: "_blank" },
+                      { href: "https://angel.co/damontian1", target: "_blank", rel: "noopener noreferrer" },
                       "Angel.co"
                     )
                   ),
@@ -14516,7 +14503,7 @@ var Footer = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                       "a",
-                      { href: "https://www.facebook.com/damontian1", target: "_blank" },
+                      { href: "https://www.facebook.com/damontian1", target: "_blank", rel: "noopener noreferrer" },
                       "FaceBook"
                     )
                   )
@@ -14644,7 +14631,7 @@ var Navigation = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                       "a",
-                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank" },
+                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank", rel: "noopener noreferrer" },
                       _react2.default.createElement("i", { className: "fa fa-linkedin", "aria-hidden": "true" })
                     ),
                     _react2.default.createElement(
@@ -14869,6 +14856,7 @@ var WorkGallery = function (_React$Component) {
         return item.tag.includes(_this2.props.filteredInput ? _this2.props.filteredInput : "Main");
       });
       return filtered.map(function (item, i) {
+        var isExternalLink = item.tag.includes("Side Projects") ? item.website : "#work-details";
         return _react2.default.createElement(
           "div",
           { key: i, className: "col-sm-6 col-md-4", style: { margin: "1em 0em" }, onClick: function onClick(id) {
@@ -14876,7 +14864,7 @@ var WorkGallery = function (_React$Component) {
             } },
           _react2.default.createElement(
             "a",
-            { href: "#work-details", style: { color: "black", textDecoration: "underline" } },
+            { href: isExternalLink, style: { color: "black", textDecoration: "underline" } },
             _react2.default.createElement(
               "div",
               { className: "project-cover-art", style: { width: "100%", position: "relative" } },
@@ -31770,8 +31758,8 @@ module.exports = function(module) {
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(118);
-module.exports = __webpack_require__(117);
+__webpack_require__(117);
+module.exports = __webpack_require__(118);
 
 
 /***/ })

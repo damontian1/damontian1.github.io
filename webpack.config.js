@@ -1,9 +1,10 @@
 module.exports = {
-  entry: [ "./src/index.js", "./src/style.scss"],
+  entry: ["./src/index.jsx", "./src/style.scss"],
   output: { filename: "./bundle.js" },
   module: {
     loaders: [
       {
+        test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         query: {
@@ -15,5 +16,8 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
-}
+};
