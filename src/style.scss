@@ -76,7 +76,7 @@ section#work-gallery {
 section#footer {
   background: #f7f7f7;
   margin-top: 0em;
-  footer{  
+  footer{
     border-top: 1px solid #e7e7e7;
     padding: 0.3em 0em 1em 0em;
   }
@@ -102,11 +102,12 @@ section#footer {
     background: transparent;
     border-radius: 0;
   }
-  input[type="submit"] {
+  button[type="submit"] {
     background: transparent;
-    border-color: red;
-    border-width: 5px;
-    border-radius: 0;
+    border: none;
+    padding: 5px 0 5px 0;
+    border-bottom: 3px solid red;
+    &:hover {font-weight: bold}
   }
   input[type="submit"]:hover {
     font-weight: 900;
@@ -125,7 +126,7 @@ section#footer {
 section#navigation {
   .navbar-header {
     img {
-      max-width: 153px
+      max-width: 150px
     }
   }
   .navbar-social-media {

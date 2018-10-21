@@ -30,13 +30,13 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-md-3 col-sm-6 footer-column">
                   <p><strong>Leave me a message</strong></p>
-                  <form>
+                  <form method="POST" action="https://formspree.io/killahb304@gmail.com">
                     <div className="form-group">
-                      <input type="text" placeholder="Enter Your Email" />
-                      <br />
-                      <textarea type="text" placeholder="Enter Your Message" rows="1" />
-                      <br />
-                      <input type="submit" value="Send Message" />
+                      <input type="email" name="email" placeholder="Enter Your Email" />
+                      <br/>
+                      <textarea name="message" placeholder="Enter Your Message" rows="1" />
+                      <br/>
+                      <button type="submit">Send Message</button>
                     </div>
                   </form>
                 </div>
@@ -45,11 +45,11 @@ class Footer extends React.Component {
                   <p><a href="https://www.linkedin.com/in/damontian1" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                   <p><a href="https://github.com/damontian1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
                   <p><a href="https://angel.co/damontian1" target="_blank" rel="noopener noreferrer">Angel.co</a></p>
-                  <p><a href="https://www.facebook.com/damontian1" target="_blank" rel="noopener noreferrer">FaceBook</a></p>
+                  <p><a href="https://codepen.io/damontian1/" target="_blank" rel="noopener noreferrer">CodePen</a></p>
                 </div>
                 <div className="col-md-2">
                   <div />
-                </div>  
+                </div>
               </div>
             </div>
           </div>
