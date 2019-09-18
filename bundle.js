@@ -14535,7 +14535,7 @@ var App = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state);
+      // console.log(this.state)
       return _react2.default.createElement(
         "div",
         null,
@@ -14612,7 +14612,7 @@ var Banner = function (_React$Component) {
           { className: "row" },
           _react2.default.createElement(
             "div",
-            { className: "col-md-8 col-md-offset-2 text-center" },
+            { className: "banner__text col-md-8 col-md-offset-2 text-center" },
             _react2.default.createElement(
               "h1",
               { style: { padding: "1em 0em 0em 0em", fontWeight: "bolder" } },
@@ -14705,20 +14705,6 @@ var Footer = function (_React$Component) {
               null,
               _react2.default.createElement(
                 "div",
-                { className: "row" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "col-md-offset-2 col-md-8 text-center" },
-                  _react2.default.createElement(
-                    "h3",
-                    { style: { fontWeight: "bolder" } },
-                    "EMAIL ME AT DAMONTIAN@LIVE.COM"
-                  ),
-                  _react2.default.createElement("hr", null)
-                )
-              ),
-              _react2.default.createElement(
-                "div",
                 { className: "row", style: { margin: "0 auto" } },
                 _react2.default.createElement(
                   "div",
@@ -14755,7 +14741,7 @@ var Footer = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "col-md-3 col-sm-6 footer-column" },
+                  { className: "col-md-3 col-sm-6 footer-column visible-sm-block" },
                   _react2.default.createElement(
                     "p",
                     null,
@@ -14788,7 +14774,7 @@ var Footer = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "col-md-3 col-sm-6 footer-column" },
+                  { className: "col-md-3 col-sm-6 footer-column visible-sm-block" },
                   _react2.default.createElement(
                     "p",
                     null,
@@ -14818,7 +14804,7 @@ var Footer = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "col-md-2 col-sm-6 text-center footer-column" },
+                  { className: "col-md-2 col-sm-6 text-center footer-column visible-sm-block" },
                   _react2.default.createElement(
                     "p",
                     null,
@@ -14928,13 +14914,13 @@ var Navigation = function (_React$Component) {
           { className: "navbar navbar-default navbar-fixed-top", style: { padding: "0em 0em" } },
           _react2.default.createElement(
             "div",
-            { className: "container-fluid navigationStyle" },
+            { className: "container-fluid navigation-style" },
             _react2.default.createElement(
               "div",
-              { className: "row" },
+              { className: "navigation-style__inner" },
               _react2.default.createElement(
                 "div",
-                { className: "col-md-2 col-xs-3" },
+                null,
                 _react2.default.createElement(
                   "div",
                   { className: "navbar-header" },
@@ -14947,7 +14933,7 @@ var Navigation = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "div",
-                { className: "col-md-8 col-md-offset-2 col-xs-9 text-right" },
+                null,
                 _react2.default.createElement(
                   "div",
                   { className: "navbar-social-media" },
@@ -15195,7 +15181,7 @@ var WorkGallery = function (_React$Component) {
     value: function renderList() {
       var _this2 = this;
 
-      console.log(this.props.projects);
+      // console.log(this.props.projects)
       var filtered = this.props.projects.filter(function (item) {
         return item.tag.includes(_this2.props.filteredInput ? _this2.props.filteredInput : "Main");
       });
@@ -16187,7 +16173,7 @@ exports = module.exports = __webpack_require__(154)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n.project-cover-art > img {\n  border-top-right-radius: 2px;\n  border-top-left-radius: 2px; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery > div {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 1rem; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; }\n  section#work-gallery > div {\n    grid-template-columns: repeat(2, 1fr); } }\n\n@media only screen and (max-width: 768px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; }\n  section#work-gallery > div {\n    grid-template-columns: 1fr; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n.project-cover-art > img {\n  border-top-right-radius: 2px;\n  border-top-left-radius: 2px; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery > div {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 1rem; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2rem 0rem; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigation-style {\n  width: 80%;\n  margin: 0px auto; }\n  section#navigation .navigation-style .navigation-style__inner {\n    display: flex;\n    justify-content: space-between;\n    flex-direction: row; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigation-style {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; }\n  section#work-gallery > div {\n    grid-template-columns: repeat(2, 1fr); } }\n\n@media only screen and (max-width: 768px) {\n  section#navigation .navigation-style {\n    width: 100%;\n    margin: 0px auto; }\n  section#work-gallery > div {\n    grid-template-columns: 1fr; } }\n\n@media only screen and (max-width: 500px) {\n  .banner__text h1 {\n    font-size: 2.5rem; }\n  .banner__text h4 {\n    font-size: 1.5rem; }\n  .navigation-style .navigation-style__inner {\n    flex-direction: column !important;\n    align-items: center; } }\n", ""]);
 
 // exports
 

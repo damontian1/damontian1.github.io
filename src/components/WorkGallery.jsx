@@ -2,7 +2,7 @@ import React from "react";
 
 class WorkGallery extends React.Component {
   renderList() {
-    console.log(this.props.projects)
+    // console.log(this.props.projects)
     var filtered = this.props.projects
       .filter(item => item.tag.includes(this.props.filteredInput ? this.props.filteredInput : "Main"))
     return filtered.map((item, i) => {
