@@ -30,7 +30,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-md-3 col-sm-6 footer-column">
                   <p><strong>Leave me a message</strong></p>
-                  <form method="POST" action="https://formspree.io/killahb304@gmail.com">
+                  <form acceptCharset="UTF-8" action="https://usebasin.com/f/5aaaf691b8a9" method="POST">
                     <div className="form-group">
                       <input type="email" name="email" placeholder="Enter Your Email" />
                       <br/>

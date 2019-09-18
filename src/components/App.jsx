@@ -9,17 +9,14 @@ import WorkDetails from "./WorkDetails";
 import WorkGallery from "./WorkGallery";
 
 import { fetchProjects, postProject } from "../actions";
+import data from './data.json';
 
 class App extends React.Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
-    this.state = { selectedProject: "", filteredInput: "Main" };
-  }
-  
-  componentDidMount() {
-    this.props.fetchProjects();
+    this.state = { selectedProject: "", filteredInput: "Main", projects: data };
   }
 
   handleClick(id, item) {
@@ -39,6 +36,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <Navigation />
@@ -55,7 +53,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    projects: state.projects
+    // projects: state.projects
   };
 };
 

@@ -1,0 +1,134 @@
+[
+  {
+    "tag": "Main",
+    "id": "1",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fsave-the-world-banner.png?alt=media&token=97ef2cc6-3e8f-49dd-8a55-83b23aac611c",
+    "title": "Save the World - Pet Adoption Site built with Ruby on Rails",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fsave-the-world.jpg?alt=media&token=37342f26-7804-49b3-92cd-7eb65fd81724",
+    "website": "https://rails-save-the-world-petfinder.herokuapp.com/",
+    "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fsavetheworld-mobile.jpg?alt=media&token=7aa37d37-1d8a-4207-905d-d4e14d12a58a",
+    "github": "https://github.com/damontian1/rails-save-the-world-petfinder",
+    "stack": [
+      "Ruby on Rails",
+      "SCSS/CSS",
+      "JavaScript",
+      "Git",
+      "BootStrap",
+      "Sketch",
+      "jQuery",
+      "PostGreSQL",
+      "Ruby",
+      "PetFinder.com API"
+    ]
+  },
+  {
+    "tag": "Main",
+    "id": "2",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Ftruckly-banner.png?alt=media&token=a2d91687-6f4b-4f2c-a862-2a4234498df2",
+    "title": "Truckly - Food Truck Delivery Startup built with Ruby on Rails",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftruckly.jpg?alt=media&token=dde178c3-5f9c-48a1-b24f-16a33e964460",
+    "website": "https://rails-truckly-food-truck.herokuapp.com/",
+    "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftruckly-mobile.jpg?alt=media&token=be8f6297-c65b-4e98-b287-84f75957b6be",
+    "github": "https://github.com/damontian1/rails-truckly-food-truck",
+    "stack": [
+      "Ruby on Rails",
+      "SCSS/CSS",
+      "JavaScript",
+      "Git",
+      "BootStrap",
+      "Sketch",
+      "PostGreSQL",
+      "Ruby",
+      "Google Maps API"
+    ]
+  },
+  {
+    "tag": "Main",
+    "id": "3",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fserenity.jpg?alt=media&token=5c26d376-2920-47f9-989d-e0ff42f60814",
+    "title": "Serenity - Clothing Store startup built with WordPress",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
+    "website": "http://www.damontian.com/wordpress-serenity",
+    "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
+    "github": "https://github.com/damontian1/wordpress-serenity",
+    "stack": [
+      "WordPress",
+      "SCSS/CSS",
+      "JavaScript",
+      "Git",
+      "Sketch",
+      "MySQL"
+    ]
+  },
+  {
+    "tag": "Main",
+    "id": "4",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fyoutube-top-media-banner.jpg?alt=media&token=7e51e1da-b252-4628-880d-8b9b0e641f90",
+    "title": "YouTube Top Media - Single Page Top Media Search built with React.JS",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftop-media.jpg?alt=media&token=2073ae73-413d-411d-958e-27fe1fee4613",
+    "website": "http://www.damontian.com/react-redux-youtube-top-media",
+    "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec",
+    "github": "https://github.com/damontian1/react-redux-youtube-top-media",
+    "stack": [
+      "JavaScript",
+      "React.JS",
+      "SCSS/CSS",
+      "Node.JS",
+      "Git",
+      "Sketch",
+      "YouTube API"
+    ]
+  },
+  {
+    "tag": "Main",
+    "id": "5",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcontacts-dashboard-banner.jpg?alt=media&token=07a1676e-bd3f-41ad-bb04-1ed312467d6a",
+    "title": "Contacts Dashboard - Single Page Address Book Manager built with React.JS",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcontacts-dashboard.jpg?alt=media&token=6c9d5f53-aa01-45dc-a7dd-db1929dc7bf1",
+    "website": "http://www.damontian.com/react-flux-contacts-dashboard",
+    "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fcontacts-dashboard-mobile.jpg?alt=media&token=a0843297-8bbe-481e-a5ee-27b25a87181f",
+    "github": "https://github.com/damontian1/react-flux-contacts-dashboard",
+    "stack": [
+      "JavaScript",
+      "React.JS",
+      "SCSS/CSS",
+      "Node.JS",
+      "Git",
+      "BootStrap",
+      "Sketch",
+      "MongoDB"
+    ]
+  },
+  {
+    "tag": "Main",
+    "id": "6",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955",
+    "title": "More Projects - Other Projects that I've worked on",
+    "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcodepen.png?alt=media&token=234e51e1-e2ae-4738-a5a5-867e52487254",
+    "website": "https://codepen.io/damontian1/pens/showcase",
+    "mobile": "",
+    "github": "https://github.com/damontian1",
+    "stack": [
+      "JavaScript",
+      "Ruby",
+      "PHP",
+      "HTML",
+      "CSS",
+      "React.js",
+      "Node.js",
+      "Ruby on Rails",
+      "WordPress",
+      "Angular",
+      "ASP.NET",
+      "Git",
+      "Bootstrap",
+      "AJAX",
+      "Sketch",
+      "jQuery",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker"
+    ]
+  }
+]
