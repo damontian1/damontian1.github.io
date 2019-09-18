@@ -52,6 +52,10 @@ section#work-gallery button:focus {
   background: rgb(192, 192, 192);
   outline: 0;
 }
+.project-cover-art > img {
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
 /***********************/
 /*       desktop       */
 /***********************/

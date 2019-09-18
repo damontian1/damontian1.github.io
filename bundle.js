@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 316);
+/******/ 	return __webpack_require__(__webpack_require__.s = 317);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -14486,6 +14486,10 @@ var _WorkGallery2 = _interopRequireDefault(_WorkGallery);
 
 var _actions = __webpack_require__(143);
 
+var _data = __webpack_require__(316);
+
+var _data2 = _interopRequireDefault(_data);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14504,16 +14508,11 @@ var App = function (_React$Component) {
 
     _this.handleClick = _this.handleClick.bind(_this);
     _this.handleFilter = _this.handleFilter.bind(_this);
-    _this.state = { selectedProject: "", filteredInput: "Main" };
+    _this.state = { selectedProject: "", filteredInput: "Main", projects: _data2.default };
     return _this;
   }
 
   _createClass(App, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchProjects();
-    }
-  }, {
     key: "handleClick",
     value: function handleClick(id, item) {
       this.setState({ selectedProject: id });
@@ -14536,6 +14535,7 @@ var App = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.state);
       return _react2.default.createElement(
         "div",
         null,
@@ -14557,7 +14557,7 @@ var App = function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    projects: state.projects
+    // projects: state.projects
   };
 };
 
@@ -14800,7 +14800,7 @@ var Footer = function (_React$Component) {
                   ),
                   _react2.default.createElement(
                     "form",
-                    { method: "POST", action: "https://formspree.io/killahb304@gmail.com" },
+                    { acceptCharset: "UTF-8", action: "https://usebasin.com/f/5aaaf691b8a9", method: "POST" },
                     _react2.default.createElement(
                       "div",
                       { className: "form-group" },
@@ -15059,7 +15059,7 @@ var WorkDetails = function (_React$Component) {
     key: "renderList",
     value: function renderList(id) {
       var selectedProject = this.props.projects.filter(function (item) {
-        return item._id.$oid === id;
+        return item.id === id;
       });
       return _react2.default.createElement(
         "div",
@@ -15082,20 +15082,6 @@ var WorkDetails = function (_React$Component) {
               selectedProject[0].title
             ),
             _react2.default.createElement("hr", null),
-            _react2.default.createElement(
-              "p",
-              null,
-              _react2.default.createElement(
-                "span",
-                { className: "project-description" },
-                "Objective"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                selectedProject[0].objective
-              )
-            ),
             _react2.default.createElement(
               "p",
               null,
@@ -15209,6 +15195,7 @@ var WorkGallery = function (_React$Component) {
     value: function renderList() {
       var _this2 = this;
 
+      console.log(this.props.projects);
       var filtered = this.props.projects.filter(function (item) {
         return item.tag.includes(_this2.props.filteredInput ? _this2.props.filteredInput : "Main");
       });
@@ -15216,8 +15203,8 @@ var WorkGallery = function (_React$Component) {
         var isExternalLink = item.tag.includes("Side Projects") ? item.website : "#work-details";
         return _react2.default.createElement(
           "div",
-          { key: i, className: "col-sm-6 col-md-4", style: { margin: "1em 0em" }, onClick: function onClick(id) {
-              _this2.props.handleClick(item._id.$oid);
+          { key: i, style: { margin: "1em 0em" }, onClick: function onClick(id) {
+              _this2.props.handleClick(item.id);
             } },
           _react2.default.createElement(
             "a",
@@ -15226,18 +15213,6 @@ var WorkGallery = function (_React$Component) {
               "div",
               { className: "project-cover-art", style: { width: "100%", position: "relative" } },
               _react2.default.createElement("img", { src: item.art, style: { width: "100%" } }),
-              _react2.default.createElement(
-                "div",
-                { className: "overlay" },
-                _react2.default.createElement(
-                  "p",
-                  { className: "overlay-text" },
-                  item.stack ? item.stack.map(function (item) {
-                    return item + ", ";
-                  }) : null,
-                  "etc.."
-                )
-              ),
               _react2.default.createElement(
                 "h5",
                 null,
@@ -15261,75 +15236,7 @@ var WorkGallery = function (_React$Component) {
         { id: "work-gallery", style: { margin: "0em 0em 0em 0em" } },
         _react2.default.createElement(
           "div",
-          { className: "row" },
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-12" },
-            _react2.default.createElement(
-              "div",
-              null,
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn", onClick: this.props.handleFilter },
-                "Main Projects"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
-                "Ruby on Rails"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
-                "React.js"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
-                "WordPress"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
-                "Flask"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              ),
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "btn btn-default", onClick: this.props.handleFilter },
-                "Side Projects"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                " "
-              )
-            )
-          ),
+          null,
           this.renderList()
         )
       );
@@ -16280,7 +16187,7 @@ exports = module.exports = __webpack_require__(154)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; } }\n\n@media only screen and (max-width: 500px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n.project-cover-art > img {\n  border-top-right-radius: 2px;\n  border-top-left-radius: 2px; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery > div {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 1rem; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2.5em 0em; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigationStyle {\n  width: 80%;\n  margin: 0px auto; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigationStyle {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; }\n  section#work-gallery > div {\n    grid-template-columns: repeat(2, 1fr); } }\n\n@media only screen and (max-width: 768px) {\n  section#navigation .navigationStyle {\n    width: 100%;\n    margin: 0px auto; }\n  section#work-gallery > div {\n    grid-template-columns: 1fr; } }\n", ""]);
 
 // exports
 
@@ -33009,6 +32916,145 @@ module.exports = function(module) {
 
 /***/ }),
 /* 316 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"tag": "Main",
+		"id": "1",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fsave-the-world-banner.png?alt=media&token=97ef2cc6-3e8f-49dd-8a55-83b23aac611c",
+		"title": "Save the World - Pet Adoption Site built with Ruby on Rails",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fsave-the-world.jpg?alt=media&token=37342f26-7804-49b3-92cd-7eb65fd81724",
+		"website": "https://rails-save-the-world-petfinder.herokuapp.com/",
+		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fsavetheworld-mobile.jpg?alt=media&token=7aa37d37-1d8a-4207-905d-d4e14d12a58a",
+		"github": "https://github.com/damontian1/rails-save-the-world-petfinder",
+		"stack": [
+			"Ruby on Rails",
+			"SCSS/CSS",
+			"JavaScript",
+			"Git",
+			"BootStrap",
+			"Sketch",
+			"jQuery",
+			"PostGreSQL",
+			"Ruby",
+			"PetFinder.com API"
+		]
+	},
+	{
+		"tag": "Main",
+		"id": "2",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Ftruckly-banner.png?alt=media&token=a2d91687-6f4b-4f2c-a862-2a4234498df2",
+		"title": "Truckly - Food Truck Delivery Startup built with Ruby on Rails",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftruckly.jpg?alt=media&token=dde178c3-5f9c-48a1-b24f-16a33e964460",
+		"website": "https://rails-truckly-food-truck.herokuapp.com/",
+		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftruckly-mobile.jpg?alt=media&token=be8f6297-c65b-4e98-b287-84f75957b6be",
+		"github": "https://github.com/damontian1/rails-truckly-food-truck",
+		"stack": [
+			"Ruby on Rails",
+			"SCSS/CSS",
+			"JavaScript",
+			"Git",
+			"BootStrap",
+			"Sketch",
+			"PostGreSQL",
+			"Ruby",
+			"Google Maps API"
+		]
+	},
+	{
+		"tag": "Main",
+		"id": "3",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fserenity.jpg?alt=media&token=5c26d376-2920-47f9-989d-e0ff42f60814",
+		"title": "Serenity - Clothing Store startup built with WordPress",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
+		"website": "http://www.damontian.com/wordpress-serenity",
+		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
+		"github": "https://github.com/damontian1/wordpress-serenity",
+		"stack": [
+			"WordPress",
+			"SCSS/CSS",
+			"JavaScript",
+			"Git",
+			"Sketch",
+			"MySQL"
+		]
+	},
+	{
+		"tag": "Main",
+		"id": "4",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fyoutube-top-media-banner.jpg?alt=media&token=7e51e1da-b252-4628-880d-8b9b0e641f90",
+		"title": "YouTube Top Media - Single Page Top Media Search built with React.JS",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftop-media.jpg?alt=media&token=2073ae73-413d-411d-958e-27fe1fee4613",
+		"website": "http://www.damontian.com/react-redux-youtube-top-media",
+		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec",
+		"github": "https://github.com/damontian1/react-redux-youtube-top-media",
+		"stack": [
+			"JavaScript",
+			"React.JS",
+			"SCSS/CSS",
+			"Node.JS",
+			"Git",
+			"Sketch",
+			"YouTube API"
+		]
+	},
+	{
+		"tag": "Main",
+		"id": "5",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcontacts-dashboard-banner.jpg?alt=media&token=07a1676e-bd3f-41ad-bb04-1ed312467d6a",
+		"title": "Contacts Dashboard - Single Page Address Book Manager built with React.JS",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcontacts-dashboard.jpg?alt=media&token=6c9d5f53-aa01-45dc-a7dd-db1929dc7bf1",
+		"website": "http://www.damontian.com/react-flux-contacts-dashboard",
+		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fcontacts-dashboard-mobile.jpg?alt=media&token=a0843297-8bbe-481e-a5ee-27b25a87181f",
+		"github": "https://github.com/damontian1/react-flux-contacts-dashboard",
+		"stack": [
+			"JavaScript",
+			"React.JS",
+			"SCSS/CSS",
+			"Node.JS",
+			"Git",
+			"BootStrap",
+			"Sketch",
+			"MongoDB"
+		]
+	},
+	{
+		"tag": "Main",
+		"id": "6",
+		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955",
+		"title": "More Projects - Other Projects that I've worked on",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcodepen.png?alt=media&token=234e51e1-e2ae-4738-a5a5-867e52487254",
+		"website": "https://codepen.io/damontian1/pens/showcase",
+		"mobile": "",
+		"github": "https://github.com/damontian1",
+		"stack": [
+			"JavaScript",
+			"Ruby",
+			"PHP",
+			"HTML",
+			"CSS",
+			"React.js",
+			"Node.js",
+			"Ruby on Rails",
+			"WordPress",
+			"Angular",
+			"ASP.NET",
+			"Git",
+			"Bootstrap",
+			"AJAX",
+			"Sketch",
+			"jQuery",
+			"MySQL",
+			"PostgreSQL",
+			"MongoDB",
+			"Docker"
+		]
+	}
+];
+
+/***/ }),
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(123);
