@@ -32964,7 +32964,7 @@ module.exports = [
 		"title": "Serenity - Clothing Store startup built with WordPress",
 		"slogan": "Serenity - Shop Men's and Women's Clothing",
 		"objective": "I wanted to create my own ecommerce website with an elegant brand design that looks and feels like a real clothing company. I wanted to create a professional and pixel-perfect user interface and I accomplished this through advanced editing of a WordPress theme. I wanted to enhance SEO visibility by optimizing all of the website's meta-keywords and promoting social media sharing. Images & content are credited to Unsplash.com and Everlane.com.",
-		"website": "http://www.damontian.com/wordpress-serenity",
+		"website": "https://www.damontian.com/wordpress-serenity",
 		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
 		"github": "https://github.com/damontian1/wordpress-serenity",
