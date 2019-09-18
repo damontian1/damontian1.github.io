@@ -92,6 +92,12 @@ section#footer {
   footer{
     border-top: 1px solid #e7e7e7;
     padding: 0.3em 0em 1em 0em;
+    .footer__inner {
+      padding: 3rem 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
   }
   input {
     padding: 0.5em 0em;

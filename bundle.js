@@ -14542,7 +14542,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(_Navigation2.default, null),
         _react2.default.createElement(
           "div",
-          { className: "container-fluid", style: { width: "80%", margin: "0 auto" } },
+          { className: "container-fluid", style: { width: "80%", margin: "0 auto", minWidth: "400px" } },
           _react2.default.createElement(_Banner2.default, null),
           _react2.default.createElement(_WorkGallery2.default, _extends({ handleClick: this.handleClick, handleFilter: this.handleFilter }, this.props, this.state)),
           _react2.default.createElement(_WorkDetails2.default, _extends({}, this.props, this.state))
@@ -14699,162 +14699,153 @@ var Footer = function (_React$Component) {
           null,
           _react2.default.createElement(
             "div",
-            { className: "container" },
+            { className: "container", style: { minWidth: "400px" } },
             _react2.default.createElement(
               "div",
-              null,
+              { className: "footer__inner", style: { margin: "0 auto" } },
               _react2.default.createElement(
                 "div",
-                { className: "row", style: { margin: "0 auto" } },
+                null,
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-4 col-sm-6 footer-column" },
+                  "p",
+                  null,
                   _react2.default.createElement(
-                    "p",
+                    "strong",
                     null,
-                    _react2.default.createElement(
-                      "strong",
-                      null,
-                      "Site Info"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "\xA9 2017 | By Damon Tian"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "Built with: ReactJS, ExpressJS,"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "NodeJS, Redux, MongoDB"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "Bootstrap, Sass, Sketch"
+                    "Site Info"
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-3 col-sm-6 footer-column visible-sm-block" },
+                  "p",
+                  null,
+                  "\xA9 2017 | By Damon Tian"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Built with: ReactJS, ExpressJS,"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "NodeJS, Redux, MongoDB"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Bootstrap, Sass, Sketch"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "hidden-xs" },
+                _react2.default.createElement(
+                  "p",
+                  null,
                   _react2.default.createElement(
-                    "p",
+                    "strong",
                     null,
-                    _react2.default.createElement(
-                      "strong",
-                      null,
-                      "Contact Info"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "Damon Tian"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "New York, NY"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "718-559-2277"
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    "damontian@live.com"
+                    "Contact Info"
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-3 col-sm-6 footer-column visible-sm-block" },
+                  "p",
+                  null,
+                  "Damon Tian"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "New York, NY"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "718-559-2277"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "damontian@live.com"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "hidden-xs visible-lg" },
+                _react2.default.createElement(
+                  "p",
+                  null,
                   _react2.default.createElement(
-                    "p",
+                    "strong",
                     null,
-                    _react2.default.createElement(
-                      "strong",
-                      null,
-                      "Leave me a message"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "form",
-                    { acceptCharset: "UTF-8", action: "https://usebasin.com/f/5aaaf691b8a9", method: "POST" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "form-group" },
-                      _react2.default.createElement("input", { type: "email", name: "email", placeholder: "Enter Your Email" }),
-                      _react2.default.createElement("br", null),
-                      _react2.default.createElement("textarea", { name: "message", placeholder: "Enter Your Message", rows: "1" }),
-                      _react2.default.createElement("br", null),
-                      _react2.default.createElement(
-                        "button",
-                        { type: "submit" },
-                        "Send Message"
-                      )
-                    )
+                    "Leave me a message"
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-2 col-sm-6 text-center footer-column visible-sm-block" },
+                  "form",
+                  { acceptCharset: "UTF-8", action: "https://usebasin.com/f/5aaaf691b8a9", method: "POST" },
                   _react2.default.createElement(
-                    "p",
-                    null,
+                    "div",
+                    { className: "form-group" },
+                    _react2.default.createElement("input", { type: "email", name: "email", placeholder: "Enter Your Email" }),
+                    _react2.default.createElement("br", null),
+                    _react2.default.createElement("textarea", { name: "message", placeholder: "Enter Your Message", rows: "1" }),
+                    _react2.default.createElement("br", null),
                     _react2.default.createElement(
-                      "strong",
-                      null,
-                      "Connect with me"
+                      "button",
+                      { type: "submit" },
+                      "Send Message"
                     )
-                  ),
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "text-center footer-column hidden-xs visible-lg" },
+                _react2.default.createElement(
+                  "p",
+                  null,
                   _react2.default.createElement(
-                    "p",
+                    "strong",
                     null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "https://www.linkedin.com/in/damontian1", target: "_blank", rel: "noopener noreferrer" },
-                      "LinkedIn"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "https://github.com/damontian1", target: "_blank", rel: "noopener noreferrer" },
-                      "GitHub"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "https://angel.co/damontian1", target: "_blank", rel: "noopener noreferrer" },
-                      "Angel.co"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "p",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "https://codepen.io/damontian1/", target: "_blank", rel: "noopener noreferrer" },
-                      "CodePen"
-                    )
+                    "Connect with me"
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-2" },
-                  _react2.default.createElement("div", null)
+                  "p",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "https://www.linkedin.com/in/damontian1", target: "_blank", rel: "noopener noreferrer" },
+                    "LinkedIn"
+                  )
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "https://github.com/damontian1", target: "_blank", rel: "noopener noreferrer" },
+                    "GitHub"
+                  )
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "https://angel.co/damontian1", target: "_blank", rel: "noopener noreferrer" },
+                    "Angel.co"
+                  )
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "https://codepen.io/damontian1/", target: "_blank", rel: "noopener noreferrer" },
+                    "CodePen"
+                  )
                 )
               )
             )
@@ -15068,6 +15059,20 @@ var WorkDetails = function (_React$Component) {
               selectedProject[0].title
             ),
             _react2.default.createElement("hr", null),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "span",
+                { className: "project-description" },
+                "Objective"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                selectedProject[0].objective
+              )
+            ),
             _react2.default.createElement(
               "p",
               null,
@@ -16173,7 +16178,7 @@ exports = module.exports = __webpack_require__(154)(undefined);
 
 
 // module
-exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n.project-cover-art > img {\n  border-top-right-radius: 2px;\n  border-top-left-radius: 2px; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery > div {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 1rem; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2rem 0rem; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigation-style {\n  width: 80%;\n  margin: 0px auto; }\n  section#navigation .navigation-style .navigation-style__inner {\n    display: flex;\n    justify-content: space-between;\n    flex-direction: row; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigation-style {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; }\n  section#work-gallery > div {\n    grid-template-columns: repeat(2, 1fr); } }\n\n@media only screen and (max-width: 768px) {\n  section#navigation .navigation-style {\n    width: 100%;\n    margin: 0px auto; }\n  section#work-gallery > div {\n    grid-template-columns: 1fr; } }\n\n@media only screen and (max-width: 500px) {\n  .banner__text h1 {\n    font-size: 2.5rem; }\n  .banner__text h4 {\n    font-size: 1.5rem; }\n  .navigation-style .navigation-style__inner {\n    flex-direction: column !important;\n    align-items: center; } }\n", ""]);
+exports.push([module.i, "/***********************/\n/*    color scheme     */\n/***********************/\n/***********************/\n/*       global        */\n/***********************/\n* {\n  box-sizing: border-box; }\n\nbody {\n  padding-top: 5em;\n  font-family: \"Sarala\"; }\n\n/***********************/\n/* bootstrap overrides */\n/***********************/\n.container-fluid {\n  width: 100%;\n  max-width: 1400px; }\n\n.btn {\n  border: 1px solid #adadad; }\n\n.navbar {\n  border-radius: 0; }\n\n.jumbotron {\n  background: #f7f7f7; }\n\n#work-details.hide {\n  opacity: 0 !important; }\n\n#work-details.fade {\n  opacity: 1 !important;\n  margin-bottom: 5em;\n  transition: 1s ease-in-out; }\n\nsection#work-gallery button:focus {\n  background: silver;\n  outline: 0; }\n\n.project-cover-art > img {\n  border-top-right-radius: 2px;\n  border-top-left-radius: 2px; }\n\n/***********************/\n/*       desktop       */\n/***********************/\nsection#work-gallery {\n  padding: 5em 0em 5em 0em; }\n  section#work-gallery > div {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 1rem; }\n  section#work-gallery .overlay {\n    position: absolute;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 2em;\n    height: 10px;\n    width: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n    opacity: 0;\n    text-align: center; }\n  section#work-gallery .project-cover-art:hover .overlay {\n    opacity: 1;\n    transition: 0.5s ease-in;\n    filter: blur(0px); }\n\nsection#footer {\n  background: #f7f7f7;\n  margin-top: 0em; }\n  section#footer footer {\n    border-top: 1px solid #e7e7e7;\n    padding: 0.3em 0em 1em 0em; }\n    section#footer footer .footer__inner {\n      padding: 3rem 0;\n      display: flex;\n      justify-content: space-evenly;\n      align-items: center; }\n  section#footer input {\n    padding: 0.5em 0em;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    background: transparent;\n    border-radius: 0; }\n  section#footer textarea {\n    resize: none;\n    border: 2px solid black;\n    border-top-style: none;\n    border-right-style: none;\n    border-bottom-style: solid;\n    border-left-style: none;\n    outline: none;\n    padding: 0.5em 0em;\n    background: transparent;\n    border-radius: 0; }\n  section#footer button[type=\"submit\"] {\n    background: transparent;\n    border: none;\n    padding: 5px 0 5px 0;\n    border-bottom: 3px solid red; }\n    section#footer button[type=\"submit\"]:hover {\n      font-weight: bold; }\n  section#footer input[type=\"submit\"]:hover {\n    font-weight: 900; }\n  section#footer .footer-column p:first-child {\n    padding: 2rem 0rem; }\n  section#footer .footer-column a {\n    color: black;\n    text-decoration: underline; }\n\nsection#navigation .navbar-header img {\n  max-width: 150px; }\n\nsection#navigation .navbar-social-media {\n  padding: 0;\n  font-size: 1.2em;\n  font-family: Sarala;\n  padding: 1em 0em 0em 1em;\n  font-weight: bolder; }\n  section#navigation .navbar-social-media span {\n    padding: 0 1em 0em 0em; }\n\nsection#navigation a {\n  color: black; }\n\nsection#navigation .navbar-default {\n  background: rgba(255, 255, 255, 0.9); }\n\nsection#navigation .navbar-social-media {\n  font-size: 1.3em;\n  padding: 1em 0em; }\n  section#navigation .navbar-social-media i {\n    padding: 0em 0.5em; }\n\nsection#navigation .navbar-header {\n  font-size: 1em;\n  padding: 0.8em 0em 0em 1em; }\n  section#navigation .navbar-header a {\n    color: black; }\n\nsection#navigation .navigation-style {\n  width: 80%;\n  margin: 0px auto; }\n  section#navigation .navigation-style .navigation-style__inner {\n    display: flex;\n    justify-content: space-between;\n    flex-direction: row; }\n\nsection#banner button {\n  margin: 0em 0.5em; }\n\nsection#work-details {\n  padding: 5em 0em 0em 0em; }\n  section#work-details .project-description {\n    display: block;\n    padding: 0.2em 3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details .project-header {\n    display: block;\n    padding: 0em 1.3em;\n    font-size: 1.1em;\n    font-weight: bolder; }\n  section#work-details a {\n    text-decoration: none;\n    color: black; }\n  section#work-details p {\n    position: relative;\n    font-size: 1.1em;\n    padding: 1em 0em; }\n  section#work-details .project-description:before {\n    content: \"\";\n    background: black;\n    position: absolute;\n    top: 29px;\n    left: 0;\n    width: 37px;\n    height: 4px; }\n  section#work-details .tag {\n    display: inline-block;\n    padding: 0.1em 1em;\n    margin: 0.2em 0.2em;\n    background: #e8e8e8;\n    border-radius: 2px; }\n\n/***********************/\n/*       mobile        */\n/***********************/\n@media only screen and (max-width: 993px) {\n  section#footer {\n    text-align: center; }\n  section#navigation .navbar-header {\n    padding: 0.5em 0em 0em 1em; }\n  section#navigation .navbar-social-media {\n    padding: 0;\n    font-size: 1em;\n    padding: 1.2em 0em 0em 1em;\n    font-weight: bolder; }\n    section#navigation .navbar-social-media span {\n      padding: 0 0.3em; }\n  section#navigation .navigation-style {\n    width: 85%;\n    margin: 0px auto; }\n  section#work-details .space {\n    margin: 2.5em 0; }\n  section#work-gallery > div {\n    grid-template-columns: repeat(2, 1fr); } }\n\n@media only screen and (max-width: 768px) {\n  section#navigation .navigation-style {\n    width: 100%;\n    margin: 0px auto; }\n  section#work-gallery > div {\n    grid-template-columns: 1fr; } }\n\n@media only screen and (max-width: 500px) {\n  .banner__text h1 {\n    font-size: 2.5rem; }\n  .banner__text h4 {\n    font-size: 1.5rem; }\n  .navigation-style .navigation-style__inner {\n    flex-direction: column !important;\n    align-items: center; } }\n", ""]);
 
 // exports
 
@@ -32910,6 +32915,8 @@ module.exports = [
 		"id": "1",
 		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fsave-the-world-banner.png?alt=media&token=97ef2cc6-3e8f-49dd-8a55-83b23aac611c",
 		"title": "Save the World - Pet Adoption Site built with Ruby on Rails",
+		"slogan": "Save The World - Adopt Pets Nearby",
+		"objective": "I wanted to create an appealing user interface that connects potential pet adopters with available pets nearby. I wanted to provide an easy-to-use interface for users to aquire additional information. I wanted each page on the website to load quickly to avoid bounce rate.",
 		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fsave-the-world.jpg?alt=media&token=37342f26-7804-49b3-92cd-7eb65fd81724",
 		"website": "https://rails-save-the-world-petfinder.herokuapp.com/",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fsavetheworld-mobile.jpg?alt=media&token=7aa37d37-1d8a-4207-905d-d4e14d12a58a",
@@ -32922,7 +32929,7 @@ module.exports = [
 			"BootStrap",
 			"Sketch",
 			"jQuery",
-			"PostGreSQL",
+			"PostgreSQL",
 			"Ruby",
 			"PetFinder.com API"
 		]
@@ -32932,6 +32939,8 @@ module.exports = [
 		"id": "2",
 		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Ftruckly-banner.png?alt=media&token=a2d91687-6f4b-4f2c-a862-2a4234498df2",
 		"title": "Truckly - Food Truck Delivery Startup built with Ruby on Rails",
+		"slogan": "Truckly - Delicious Food Truck Cuisine",
+		"objective": "I wanted to create a fun startup company with an innovative idea targeted towards a younger audience. The interface would be informative to get users quickly on board with our business plan. It would be easy to use so that users can easily do two primary things: 1. find information about the current truck location 2. place an order online.",
 		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftruckly.jpg?alt=media&token=dde178c3-5f9c-48a1-b24f-16a33e964460",
 		"website": "https://rails-truckly-food-truck.herokuapp.com/",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftruckly-mobile.jpg?alt=media&token=be8f6297-c65b-4e98-b287-84f75957b6be",
@@ -32943,7 +32952,7 @@ module.exports = [
 			"Git",
 			"BootStrap",
 			"Sketch",
-			"PostGreSQL",
+			"PostgreSQL",
 			"Ruby",
 			"Google Maps API"
 		]
@@ -32953,8 +32962,10 @@ module.exports = [
 		"id": "3",
 		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fserenity.jpg?alt=media&token=5c26d376-2920-47f9-989d-e0ff42f60814",
 		"title": "Serenity - Clothing Store startup built with WordPress",
-		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
+		"slogan": "Serenity - Shop Men's and Women's Clothing",
+		"objective": "I wanted to create my own ecommerce website with an elegant brand design that looks and feels like a real clothing company. I wanted to create a professional and pixel-perfect user interface and I accomplished this through advanced editing of a WordPress theme. I wanted to enhance SEO visibility by optimizing all of the website's meta-keywords and promoting social media sharing. Images & content are credited to Unsplash.com and Everlane.com.",
 		"website": "http://www.damontian.com/wordpress-serenity",
+		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
 		"github": "https://github.com/damontian1/wordpress-serenity",
 		"stack": [
@@ -32971,6 +32982,8 @@ module.exports = [
 		"id": "4",
 		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fyoutube-top-media-banner.jpg?alt=media&token=7e51e1da-b252-4628-880d-8b9b0e641f90",
 		"title": "YouTube Top Media - Single Page Top Media Search built with React.JS",
+		"slogan": "YouTube Top Media - Find trending music and movies on YouTube",
+		"objective": "I wanted to create a seamless Single-page application where users can quickly stay up to date with current popular music and movies all on one page. I wanted users to be able to easily select, search, and watch their content without the page ever reloading.",
 		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftop-media.jpg?alt=media&token=2073ae73-413d-411d-958e-27fe1fee4613",
 		"website": "http://www.damontian.com/react-redux-youtube-top-media",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec",
@@ -32990,6 +33003,8 @@ module.exports = [
 		"id": "5",
 		"art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcontacts-dashboard-banner.jpg?alt=media&token=07a1676e-bd3f-41ad-bb04-1ed312467d6a",
 		"title": "Contacts Dashboard - Single Page Address Book Manager built with React.JS",
+		"slogan": "Contacts Dashboard - Your personalized address book dashboard",
+		"objective": "I wanted to create a fast Single-page application that allows users to add, edit, delete, and search contacts from a database, without having to reload the page.",
 		"desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcontacts-dashboard.jpg?alt=media&token=6c9d5f53-aa01-45dc-a7dd-db1929dc7bf1",
 		"website": "http://www.damontian.com/react-flux-contacts-dashboard",
 		"mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fcontacts-dashboard-mobile.jpg?alt=media&token=a0843297-8bbe-481e-a5ee-27b25a87181f",

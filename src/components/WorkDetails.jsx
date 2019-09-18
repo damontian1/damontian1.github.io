@@ -16,10 +16,10 @@ class WorkDetails extends React.Component {
           <div style={{ padding: "0em 2em 2em 2em" }}>
             <h2 style={{ fontWeight: "bolder", margin: "0" }}>{selectedProject[0].title}</h2>
             <hr />
-            {/* <p>
+            <p>
               <span className="project-description">Objective</span>
               <span>{selectedProject[0].objective}</span>
-            </p> */}
+            </p>
             <p>
               <span className="project-description">Website</span>
               <a href={selectedProject[0].website} target="_blank">{selectedProject[0].website}</a>

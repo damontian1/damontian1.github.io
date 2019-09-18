@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <Navigation />
-        <div className="container-fluid" style={{ width: "80%", margin: "0 auto" }}>
+        <div className="container-fluid" style={{ width: "80%", margin: "0 auto", minWidth: "400px" }}>
           <Banner />
           <WorkGallery handleClick={this.handleClick} handleFilter={this.handleFilter} {...this.props} {...this.state} />
           <WorkDetails {...this.props} {...this.state} />
