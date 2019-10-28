@@ -4,11 +4,12 @@
   "description": "This is version 2 of www.damontian.com with a new design and built with React.js, React-router, Redux, and Express.js/Node.js",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build -d docs",
     "start": "parcel index.html"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
