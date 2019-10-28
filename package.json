@@ -4,39 +4,20 @@
   "description": "This is version 2 of www.damontian.com with a new design and built with React.js, React-router, Redux, and Express.js/Node.js",
   "main": "index.js",
   "scripts": {
-    "build": "node node_modules/webpack/bin/webpack.js",
-    "start": "nodemon node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "build": "parcel build index.html",
+    "start": "parcel index.html"
   },
   "dependencies": {
-    "axios": "^0.16.2",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "css-loader": "^0.28.4",
-    "express": "^4.15.3",
-    "lodash": "^4.17.4",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.19.2",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-redux": "^5.0.5",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.1",
-    "redux-promise": "^0.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
-  "keywords": [
-    "React.js",
-    "React-router",
-    "Redux",
-    "Express.js",
-    "Node.js"
-  ],
+  "keywords": [],
   "author": "Damon Tian",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "sass": "^1.23.1"
+  }
 }
