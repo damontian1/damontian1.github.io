@@ -1,5 +1,6 @@
 import React from "react";
 import { Consumer } from './Context';
+import Spinner from './Spinner';
 
 class WorkGallery extends React.Component {
   render() {
@@ -24,10 +25,9 @@ class WorkGallery extends React.Component {
             })
           }
           return (
-            <section id="work-gallery" style={{ margin: "0em 0em 0em 0em" }}>
-              <div>
-                {renderList()}
-              </div>
+            <section id="work-gallery" style={{ margin: "0em 0em 0em 0em", opacity: 0, transition: "0.5s ease-in" }}>
+              {renderList()}
+              {window.addEventListener('load', () => { document.querySelector("#work-gallery").style.opacity = 1; })}
             </section>
           )
         }}

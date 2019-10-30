@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/object-assign/index.js":[function(require,module,exports) {
+})({"node_modules/object-assign/index.js":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -213,7 +213,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
   return to;
 };
-},{}],"../node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
+},{}],"node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -227,7 +227,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],"../node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
+},{}],"node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -323,7 +323,7 @@ checkPropTypes.resetWarningCache = function () {
 };
 
 module.exports = checkPropTypes;
-},{"./lib/ReactPropTypesSecret":"../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"node_modules/react/cjs/react.development.js":[function(require,module,exports) {
 /** @license React v16.11.0
  * react.development.js
  *
@@ -2589,7 +2589,7 @@ if ("development" !== "production") {
     module.exports = react;
   })();
 }
-},{"object-assign":"../node_modules/object-assign/index.js","prop-types/checkPropTypes":"../node_modules/prop-types/checkPropTypes.js"}],"../node_modules/react/index.js":[function(require,module,exports) {
+},{"object-assign":"node_modules/object-assign/index.js","prop-types/checkPropTypes":"node_modules/prop-types/checkPropTypes.js"}],"node_modules/react/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -2597,7 +2597,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":"../node_modules/react/cjs/react.development.js"}],"../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
+},{"./cjs/react.development.js":"node_modules/react/cjs/react.development.js"}],"node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
 /** @license React v0.17.0
  * scheduler.development.js
  *
@@ -3625,7 +3625,7 @@ if ("development" !== "production") {
     exports.unstable_Profiling = unstable_Profiling;
   })();
 }
-},{}],"../node_modules/scheduler/index.js":[function(require,module,exports) {
+},{}],"node_modules/scheduler/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -3633,7 +3633,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler.development.js');
 }
-},{"./cjs/scheduler.development.js":"../node_modules/scheduler/cjs/scheduler.development.js"}],"../node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler.development.js":"node_modules/scheduler/cjs/scheduler.development.js"}],"node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
 /** @license React v0.17.0
  * scheduler-tracing.development.js
  *
@@ -4037,7 +4037,7 @@ if ("development" !== "production") {
     exports.unstable_unsubscribe = unstable_unsubscribe;
   })();
 }
-},{}],"../node_modules/scheduler/tracing.js":[function(require,module,exports) {
+},{}],"node_modules/scheduler/tracing.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -4045,7 +4045,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
-},{"./cjs/scheduler-tracing.development.js":"../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler-tracing.development.js":"node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
 /** @license React v16.11.0
  * react-dom.development.js
  *
@@ -31738,7 +31738,7 @@ if ("development" !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"react":"../node_modules/react/index.js","object-assign":"../node_modules/object-assign/index.js","scheduler":"../node_modules/scheduler/index.js","prop-types/checkPropTypes":"../node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"../node_modules/scheduler/tracing.js"}],"../node_modules/react-dom/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","object-assign":"node_modules/object-assign/index.js","scheduler":"node_modules/scheduler/index.js","prop-types/checkPropTypes":"node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"node_modules/scheduler/tracing.js"}],"node_modules/react-dom/index.js":[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -31776,7 +31776,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/Banner.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/Banner.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31860,7 +31860,7 @@ function (_React$Component) {
 
 var _default = Banner;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31959,7 +31959,7 @@ function (_React$Component) {
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Navigation.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"components/Navigation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32062,7 +32062,7 @@ function (_React$Component) {
 
 var _default = Navigation;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"assets/data.json":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"assets/data.json":[function(require,module,exports) {
 module.exports = [{
   "tag": "Main",
   "id": "1",
@@ -32223,7 +32223,7 @@ function (_React$Component) {
 exports.Provider = Provider;
 var Consumer = Context.Consumer;
 exports.Consumer = Consumer;
-},{"react":"../node_modules/react/index.js","../assets/data.json":"assets/data.json"}],"components/WorkDetails.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../assets/data.json":"assets/data.json"}],"components/WorkDetails.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32343,7 +32343,30 @@ function (_React$Component) {
 
 var _default = WorkDetails;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Context":"components/Context.js"}],"components/WorkGallery.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Context":"components/Context.js"}],"components/Spinner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Spinner = function Spinner() {
+  return _react.default.createElement("div", {
+    className: "loader",
+    style: {
+      marginTop: "5rem"
+    }
+  });
+};
+
+var _default = Spinner;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"components/WorkGallery.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32354,6 +32377,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var _Context = require("./Context");
+
+var _Spinner = _interopRequireDefault(require("./Spinner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32434,9 +32459,13 @@ function (_React$Component) {
         return _react.default.createElement("section", {
           id: "work-gallery",
           style: {
-            margin: "0em 0em 0em 0em"
+            margin: "0em 0em 0em 0em",
+            opacity: 0,
+            transition: "0.5s ease-in"
           }
-        }, _react.default.createElement("div", null, renderList()));
+        }, renderList(), window.addEventListener('load', function () {
+          document.querySelector("#work-gallery").style.opacity = 1;
+        }));
       });
     }
   }]);
@@ -32446,7 +32475,7 @@ function (_React$Component) {
 
 var _default = WorkGallery;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Context":"components/Context.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Context":"components/Context.js","./Spinner":"components/Spinner.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32518,7 +32547,7 @@ function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Banner":"components/Banner.js","./Footer":"components/Footer.js","./Navigation":"components/Navigation.js","./WorkDetails":"components/WorkDetails.js","./WorkGallery":"components/WorkGallery.js","./Context":"components/Context.js"}],"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Banner":"components/Banner.js","./Footer":"components/Footer.js","./Navigation":"components/Navigation.js","./WorkDetails":"components/WorkDetails.js","./WorkGallery":"components/WorkGallery.js","./Context":"components/Context.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -32550,7 +32579,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -32585,12 +32614,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32604,7 +32633,7 @@ require("./style.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/App":"components/App.js","./style.scss":"style.scss"}],"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/App":"components/App.js","./style.scss":"style.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32632,7 +32661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60723" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57588" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -32663,8 +32692,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 
@@ -32807,5 +32837,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
