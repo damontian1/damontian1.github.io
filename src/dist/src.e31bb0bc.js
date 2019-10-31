@@ -31841,7 +31841,7 @@ function (_React$Component) {
           padding: "0 0 1em",
           lineHeight: "25px"
         }
-      }, _react.default.createElement("strong", null, "My Top Skills:"), " HTML/CSS, JavaScript, React.js, Node.js/Express.js, Ruby, Ruby on Rails, PostgreSQL, WordPress, Git/Github, Bootstrap "), _react.default.createElement("div", null, _react.default.createElement("a", {
+      }, _react.default.createElement("strong", null, "My Top Skills:"), " HTML/CSS, JavaScript, React.js, Laravel, Statamic CMS, Node.js/Express.js, Docker, Ruby, Ruby on Rails, MongoDB, MySQL, PostgreSQL, WordPress, Git/Github, Bootstrap, Sketch"), _react.default.createElement("div", null, _react.default.createElement("a", {
         className: "btn btn-default",
         target: "_blank",
         href: "https://drive.google.com/file/d/17hPBvj_j4x9EQ9xdu-npg9hrNG9VKUA4/view"
@@ -31916,7 +31916,7 @@ function (_React$Component) {
         style: {
           margin: "0 auto"
         }
-      }, _react.default.createElement("div", null, _react.default.createElement("p", null, _react.default.createElement("strong", null, "Site Info")), _react.default.createElement("p", null, "\xA9 2017 | By Damon Tian"), _react.default.createElement("p", null, "Built with: ReactJS, ExpressJS,"), _react.default.createElement("p", null, "NodeJS, Redux, MongoDB"), _react.default.createElement("p", null, "Bootstrap, Sass, Sketch")), _react.default.createElement("div", {
+      }, _react.default.createElement("div", null, _react.default.createElement("p", null, _react.default.createElement("strong", null, "Site Info")), _react.default.createElement("p", null, "\xA9 2019 | By Damon Tian"), _react.default.createElement("p", null, "Built with: React.js"), _react.default.createElement("p", null, "MongoDB, Node.js, SASS"), _react.default.createElement("p", null, "Bootstrap, Sketch")), _react.default.createElement("div", {
         className: "hidden-xs"
       }, _react.default.createElement("p", null, _react.default.createElement("strong", null, "Contact Info")), _react.default.createElement("p", null, "Damon Tian"), _react.default.createElement("p", null, "New York, NY"), _react.default.createElement("p", null, "718-559-2277"), _react.default.createElement("p", null, "damontian@live.com")), _react.default.createElement("div", {
         className: "hidden-xs visible-lg"
@@ -32661,7 +32661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57588" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51314" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

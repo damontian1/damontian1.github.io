@@ -9,10 +9,10 @@ class Footer extends React.Component {
             <div className="footer__inner" style={{ margin: "0 auto" }}>
               <div>
                 <p><strong>Site Info</strong></p>
-                <p>© 2017 | By Damon Tian</p>
-                <p>Built with: ReactJS, ExpressJS,</p>
-                <p>NodeJS, Redux, MongoDB</p>
-                <p>Bootstrap, Sass, Sketch</p>
+                <p>© 2019 | By Damon Tian</p>
+                <p>Built with: React.js</p>
+                <p>MongoDB, Node.js, SASS</p>
+                <p>Bootstrap, Sketch</p>
               </div>
               <div className="hidden-xs">
                 <p><strong>Contact Info</strong></p>
