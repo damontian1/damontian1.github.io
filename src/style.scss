@@ -52,9 +52,14 @@ section#work-gallery button:focus {
   background: rgb(192, 192, 192);
   outline: 0;
 }
-.project-cover-art > img {
-  border-top-right-radius: 2px;
-  border-top-left-radius: 2px;
+.project-cover-art {
+  & > img {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+  h5 {
+    font-size: 2rem;
+  }
 }
 .loader:before {
   content: "";
@@ -205,6 +210,7 @@ section#navigation {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
+      padding: 1rem 0;
     }
   }
 }
@@ -216,7 +222,7 @@ section#banner {
 }
 
 section#work-details {
-  padding: 5em 0em 0em 0em;
+  padding: 9em 0em 0em 0em;
   .project-description {
     display: block;
     padding: 0.2em 3em;

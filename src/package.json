@@ -1,7 +1,7 @@
 {
   "name": "www.damontian.com-v2",
   "version": "1.0.0",
-  "description": "This is version 2 of www.damontian.com with a new design and built with React.js, React-router, Redux, and Express.js/Node.js",
+  "description": "This is version 2 of www.damontian.com",
   "main": "index.js",
   "scripts": {
     "build": "parcel build index.html -d ../",

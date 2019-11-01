@@ -52,6 +52,9 @@ section#work-gallery button:focus {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
 }
+.project-cover-art h5 {
+  font-size: 2rem;
+}
 
 .loader:before {
   content: "";
@@ -205,6 +208,7 @@ section#navigation .navigation-style .navigation-style__inner {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding: 1rem 0;
 }
 
 section#banner button {
@@ -212,7 +216,7 @@ section#banner button {
 }
 
 section#work-details {
-  padding: 5em 0em 0em 0em;
+  padding: 9em 0em 0em 0em;
 }
 section#work-details .project-description {
   display: block;
