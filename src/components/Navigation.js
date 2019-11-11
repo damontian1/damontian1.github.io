@@ -20,7 +20,7 @@ class Navigation extends React.Component {
                 <div className="navbar-social-media">
                   <a href="#banner"><span>ABOUT</span></a>
                   <a href="#work-gallery"><span>PROJECTS</span></a>
-                  <a href="#footer"><span>CONTACT</span></a>
+                  <a href="mailto:damontian@live.com"><span>CONTACT</span></a>
                   <span className="hidden-xs hidden-sm">
                     <span style={{ paddingRight: "0.8em" }}>|</span>
                     <a href="https://www.linkedin.com/in/damontian1" target="_blank" rel="noopener noreferrer">
@@ -29,7 +29,7 @@ class Navigation extends React.Component {
                     <a href="https://github.com/damontian1" target="_blank">
                       <i className="fab fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="https://codepen.io/damontian1/pens" target="_blank">
+                    <a href="https://codepen.io/damontian1/pens/loved" target="_blank">
                       <i className="fab fa-codepen" aria-hidden="true"></i>
                     </a>
                   </span>

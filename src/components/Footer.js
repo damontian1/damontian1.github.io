@@ -37,7 +37,7 @@ class Footer extends React.Component {
                 <p><strong>Connect with me</strong></p>
                 <p><a href="https://www.linkedin.com/in/damontian1" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                 <p><a href="https://github.com/damontian1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                <p><a href="https://codepen.io/damontian1/" target="_blank" rel="noopener noreferrer">CodePen</a></p>
+                <p><a href="https://codepen.io/damontian1/pens/loved" target="_blank" rel="noopener noreferrer">CodePen</a></p>
               </div>
             </div>
           </div>

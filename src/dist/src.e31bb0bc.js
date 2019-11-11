@@ -31947,7 +31947,7 @@ function (_React$Component) {
         target: "_blank",
         rel: "noopener noreferrer"
       }, "GitHub")), _react.default.createElement("p", null, _react.default.createElement("a", {
-        href: "https://codepen.io/damontian1/",
+        href: "https://codepen.io/damontian1/pens/loved",
         target: "_blank",
         rel: "noopener noreferrer"
       }, "CodePen")))))));
@@ -32027,7 +32027,7 @@ function (_React$Component) {
       }, _react.default.createElement("span", null, "ABOUT")), _react.default.createElement("a", {
         href: "#work-gallery"
       }, _react.default.createElement("span", null, "PROJECTS")), _react.default.createElement("a", {
-        href: "#footer"
+        href: "mailto:damontian@live.com"
       }, _react.default.createElement("span", null, "CONTACT")), _react.default.createElement("span", {
         className: "hidden-xs hidden-sm"
       }, _react.default.createElement("span", {
@@ -32048,7 +32048,7 @@ function (_React$Component) {
         className: "fab fa-github",
         "aria-hidden": "true"
       })), _react.default.createElement("a", {
-        href: "https://codepen.io/damontian1/pens",
+        href: "https://codepen.io/damontian1/pens/loved",
         target: "_blank"
       }, _react.default.createElement("i", {
         className: "fab fa-codepen",
@@ -32547,7 +32547,7 @@ function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Banner":"components/Banner.js","./Footer":"components/Footer.js","./Navigation":"components/Navigation.js","./WorkDetails":"components/WorkDetails.js","./WorkGallery":"components/WorkGallery.js","./Context":"components/Context.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Banner":"components/Banner.js","./Footer":"components/Footer.js","./Navigation":"components/Navigation.js","./WorkDetails":"components/WorkDetails.js","./WorkGallery":"components/WorkGallery.js","./Context":"components/Context.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -32579,7 +32579,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -32614,12 +32614,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32633,7 +32633,7 @@ require("./style.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/App":"components/App.js","./style.scss":"style.scss"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/App":"components/App.js","./style.scss":"style.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32661,7 +32661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54723" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54873" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -32692,8 +32692,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 
@@ -32836,5 +32837,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
