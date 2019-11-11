@@ -32071,21 +32071,21 @@ module.exports = [{
   "slogan": "Save The World - Adopt Pets Nearby",
   "objective": "I wanted to create an appealing user interface that connects potential pet adopters with available pets nearby. I wanted to provide an easy-to-use interface for users to aquire additional information. I wanted each page on the website to load quickly to avoid bounce rate.",
   "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fsave-the-world.jpg?alt=media&token=37342f26-7804-49b3-92cd-7eb65fd81724",
-  "website": "https://rails-save-the-world-petfinder.herokuapp.com/",
+  "website": "https://laravel-save-the-world.herokuapp.com",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fsavetheworld-mobile.jpg?alt=media&token=7aa37d37-1d8a-4207-905d-d4e14d12a58a",
-  "github": "https://github.com/damontian1/laravel-save-the-world-petfinder",
+  "github": "https://github.com/damontian1/laravel-save-the-world",
   "stack": ["Laravel", "CSS/SCSS", "JavaScript", "Git", "BootStrap", "Sketch", "jQuery", "PostgreSQL", "Ruby", "PetFinder.com API"]
 }, {
   "tag": "Main",
   "id": "2",
   "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Ftruckly-banner.png?alt=media&token=a2d91687-6f4b-4f2c-a862-2a4234498df2",
-  "title": "Truckly - Food Truck Delivery Startup built with Laravel",
-  "slogan": "Truckly - Delicious Food Truck Cuisine",
+  "title": "Truckly - Food Truck Delivery built with Laravel",
+  "slogan": "Truckly - Delicious Food Truck Delivery",
   "objective": "I wanted to create a fun startup company with an innovative idea targeted towards a younger audience. The interface would be informative to get users quickly on board with our business plan. It would be easy to use so that users can easily do two primary things: 1. find information about the current truck location 2. place an order online.",
   "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftruckly.jpg?alt=media&token=dde178c3-5f9c-48a1-b24f-16a33e964460",
-  "website": "https://rails-truckly-food-truck.herokuapp.com/",
+  "website": "https://laravel-truckly.herokuapp.com",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftruckly-mobile.jpg?alt=media&token=be8f6297-c65b-4e98-b287-84f75957b6be",
-  "github": "https://github.com/damontian1/laravel-truckly-food-truck",
+  "github": "https://github.com/damontian1/laravel-truckly",
   "stack": ["Laravel", "CSS/SCSS", "JavaScript", "Git", "BootStrap", "Sketch", "PostgreSQL", "Ruby", "Google Maps API"]
 }, {
   "tag": "Main",
@@ -32129,8 +32129,8 @@ module.exports = [{
   "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fmore-projects.png?alt=media&token=749e46d5-4649-48c1-840b-8912a7d61955",
   "title": "CodePen - Addtional Projects",
   "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcodepen.png?alt=media&token=234e51e1-e2ae-4738-a5a5-867e52487254",
-  "objective": "Here are some other projects that I've worked on for other clients and companies",
-  "website": "https://codepen.io/damontian1/pens/showcase",
+  "objective": "Here are some projects that I've worked on for various clients and companies",
+  "website": "https://codepen.io/damontian1/pens/loved",
   "mobile": "",
   "github": "https://github.com/damontian1",
   "stack": ["JavaScript", "Laravel", "Statamic CMS", "Ruby", "PHP", "HTML", "CSS/SCSS", "React.js", "Node.js", "Ruby on Rails", "WordPress", "Angular", "ASP.NET", "Git", "Bootstrap", "AJAX", "Sketch", "jQuery", "MySQL", "PostgreSQL", "MongoDB", "Docker"]
@@ -32661,7 +32661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54294" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

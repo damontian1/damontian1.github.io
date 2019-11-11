@@ -8,7 +8,6 @@
     "start": "parcel index.html"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
@@ -18,7 +17,8 @@
   "author": "Damon Tian",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
     "sass": "^1.23.1"
   }
 }
