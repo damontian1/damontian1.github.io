@@ -32074,7 +32074,7 @@ module.exports = [{
   "website": "https://laravel-save-the-world.herokuapp.com",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fsavetheworld-mobile.jpg?alt=media&token=7aa37d37-1d8a-4207-905d-d4e14d12a58a",
   "github": "https://github.com/damontian1/laravel-save-the-world",
-  "stack": ["Laravel", "CSS/SCSS", "JavaScript", "Git", "BootStrap", "Sketch", "jQuery", "PostgreSQL", "Ruby", "PetFinder.com API"]
+  "stack": ["Laravel", "CSS/SCSS", "JavaScript", "BootStrap", "Sketch", "jQuery", "PostgreSQL", "PHP", "PetFinder API", "Git"]
 }, {
   "tag": "Main",
   "id": "2",
@@ -32086,7 +32086,7 @@ module.exports = [{
   "website": "https://laravel-truckly.herokuapp.com",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftruckly-mobile.jpg?alt=media&token=be8f6297-c65b-4e98-b287-84f75957b6be",
   "github": "https://github.com/damontian1/laravel-truckly",
-  "stack": ["Laravel", "CSS/SCSS", "JavaScript", "Git", "BootStrap", "Sketch", "PostgreSQL", "Ruby", "Google Maps API"]
+  "stack": ["Laravel", "CSS/SCSS", "JavaScript", "BootStrap", "Sketch", "PostgreSQL", "PHP", "Google Maps API", "Git"]
 }, {
   "tag": "Main",
   "id": "3",
@@ -32098,7 +32098,7 @@ module.exports = [{
   "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
   "github": "https://github.com/damontian1/wordpress-serenity",
-  "stack": ["WordPress", "CSS/SCSS", "JavaScript", "Git", "Sketch", "MySQL"]
+  "stack": ["WordPress", "CSS/SCSS", "JavaScript", "Sketch", "MySQL", "Git"]
 }, {
   "tag": "Main",
   "id": "4",
@@ -32110,7 +32110,7 @@ module.exports = [{
   "website": "http://www.damontian.com/react-youtube-top-media",
   "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec",
   "github": "https://github.com/damontian1/react-youtube-top-media",
-  "stack": ["JavaScript", "React.JS", "CSS/SCSS", "Node.JS", "Git", "Sketch", "YouTube API"]
+  "stack": ["JavaScript", "React.JS", "CSS/SCSS", "Node.JS", "Sketch", "YouTube API", "Git"]
 }, {
   "tag": "Main",
   "id": "5",
@@ -32661,7 +32661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54873" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

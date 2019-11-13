@@ -49,8 +49,7 @@ section#work-gallery button:focus {
 }
 
 .project-cover-art > img {
-  border-top-right-radius: 2px;
-  border-top-left-radius: 2px;
+  border-radius: 4px;
 }
 .project-cover-art h5 {
   font-size: 2rem;

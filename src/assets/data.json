@@ -14,13 +14,13 @@
       "Laravel",
       "CSS/SCSS",
       "JavaScript",
-      "Git",
       "BootStrap",
       "Sketch",
       "jQuery",
       "PostgreSQL",
-      "Ruby",
-      "PetFinder.com API"
+      "PHP",
+      "PetFinder API",
+      "Git"
     ]
   },
   {
@@ -38,12 +38,12 @@
       "Laravel",
       "CSS/SCSS",
       "JavaScript",
-      "Git",
       "BootStrap",
       "Sketch",
       "PostgreSQL",
-      "Ruby",
-      "Google Maps API"
+      "PHP",
+      "Google Maps API",
+      "Git"
     ]
   },
   {
@@ -61,9 +61,9 @@
       "WordPress",
       "CSS/SCSS",
       "JavaScript",
-      "Git",
       "Sketch",
-      "MySQL"
+      "MySQL",
+      "Git"
     ]
   },
   {
@@ -82,9 +82,9 @@
       "React.JS",
       "CSS/SCSS",
       "Node.JS",
-      "Git",
       "Sketch",
-      "YouTube API"
+      "YouTube API",
+      "Git"
     ]
   },
   {
