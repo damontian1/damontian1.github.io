@@ -2,7 +2,7 @@
   {
     "id": "1",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fserenity.jpg?alt=media&token=5c26d376-2920-47f9-989d-e0ff42f60814",
-    "title": "Serenity - Clothing Store",
+    "title": "Serenity Clothing Store",
     "slug": "project-serenity",
     "objective": "I wanted to create my own ecommerce website with an elegant brand design. Images & content are credited to Unsplash.com and Everlane.com.",
     "website": "https://damontian1.github.io/wordpress-serenity",
@@ -19,7 +19,7 @@
   {
     "id": "2",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcodepen2.png?alt=media&token=8bc70cda-9ecc-4395-b760-0c39e78db77e",
-    "title": "CodePen - Addtional Projects",
+    "title": "CodePen Projects",
     "slug": "project-codepen",
     "objective": "Here are some projects that I've worked on for various clients and companies.",
     "website": "https://codepen.io/damontian1/pens/loved",
