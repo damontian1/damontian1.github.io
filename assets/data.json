@@ -4,7 +4,7 @@
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fnetflix-clone-logo.png?alt=media&token=1dc69b26-24f8-4a09-8b3f-8817a811d662",
     "title": "Netflix Clone",
     "slug": "netflix-clone",
-    "objective": "I recreated the Netflix website using Next.js, Tailwind CSS, and I utilized the api from themoviedb.org",
+    "objective": "I wanted to make a clone of the Netflix website using Next.js, Tailwind CSS, and The Movie Database API. I also cloned the layout of the Netflix iOS app for the mobile view.",
     "website": "https://damontian1.github.io/react-netflix-clone",
     "github": "https://github.com/damontian1/react-netflix-clone",
     "stack": [
@@ -20,7 +20,7 @@
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcodepen-logo.png?alt=media&token=092f8168-c833-4265-bb55-4d4298b4e0cb",
     "title": "CodePen Projects",
     "slug": "codepen-projects",
-    "objective": "Here are some side projects that I've worked on.",
+    "objective": "When I have new designs or ideas, I usually build prototypes of them on CodePen. Here are some of my side projects.",
     "website": "https://codepen.io/damontian1/pens/loved",
     "stack": [
       "JavaScript",
