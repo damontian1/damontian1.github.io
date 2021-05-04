@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fnetflix-clone-logo.png?alt=media&token=880bc046-9024-42fa-8b70-1c21a3b9ac59",
+    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fnetflix-clone-logo.png?alt=media&token=1dc69b26-24f8-4a09-8b3f-8817a811d662",
     "title": "Netflix Clone",
     "slug": "netflix-clone",
     "objective": "I recreated the Netflix website using Next.js, Tailwind CSS, and I utilized the api from themoviedb.org",
