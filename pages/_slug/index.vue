@@ -22,14 +22,14 @@
         class="max-w-sm h-64 my-8 rounded"
       />
       <div class="mb-6">
-        <span class="uppercase font-bold">Objective:</span>
+        <span class="uppercase font-bold">Description:</span>
         <p>{{ currentData.objective }}</p>
       </div>
       <div class="mb-6">
         <div>
           <span class="uppercase font-bold">Website:</span>
         </div>
-        <a :href="currentData.website" class="underline">{{
+        <a :href="currentData.website" target="_blank" class="underline">{{
           currentData.website
         }}</a>
       </div>
@@ -37,7 +37,7 @@
         <div>
           <span class="uppercase font-bold">Github:</span>
         </div>
-        <a :href="currentData.github" class="underline">{{
+        <a :href="currentData.github" target="_blank" class="underline">{{
           currentData.github
         }}</a>
       </div>
