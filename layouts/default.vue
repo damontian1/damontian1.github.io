@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto px-5 mt-20" style="min-width: 350px">
+  <div class="max-w-4xl mt-20 mx-auto px-5 sm:px-8" style="min-width: 350px">
     <navigation-component />
     <div>
       <nuxt keep-alive></nuxt>

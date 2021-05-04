@@ -13,9 +13,9 @@
             <hr class="my-6" />
             <h4 class="mb-10 text-gray-800">
               <strong class="block text-black mb-1">My Top Skills:</strong>
-              HTML/CSS, JavaScript, React.js, Laravel, Statamic CMS,
-              Node.js/Express.js, Docker, Ruby, Ruby on Rails, MongoDB, MySQL,
-              PostgreSQL, WordPress, Git/Github, Tailwind CSS, Sketch
+              HTML, CSS, JavaScript, Vue.js, React.js, Laravel, Docker, Tailwind
+              CSS, Bootstrap CSS, Sketch, Statamic CMS, Node.js, Express.js,
+              Bash, Git, MySQL, MongoDB
             </h4>
             <div>
               <a
@@ -51,6 +51,7 @@
           </nuxt-link>
         </div>
       </div>
+      <div class="h-20 w-full invisible"></div>
     </div>
   </div>
 </template>

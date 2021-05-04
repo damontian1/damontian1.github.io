@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white fixed left-0 opacity-95 right-0 top-0 z-50">
     <nav class="border border-l-0 border-r-0 border-t-0">
-      <div class="max-w-4xl mx-auto my-5 px-5">
+      <div class="max-w-4xl mx-auto my-5 px-5 sm:px-8">
         <div class="flex items-center justify-center sm:justify-between">
           <nuxt-link to="/">
             <v-lazy-image
