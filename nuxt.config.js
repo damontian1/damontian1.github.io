@@ -4,14 +4,38 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Damon Tian Portfolio',
+    title: 'Damon Tian | Portfolio',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'I’m Damon, a Web Developer from New York City and I love building beautiful and intuitive web applications.' }
+      { hid: 'description', name: 'description', content: 'I’m Damon, a Web Developer from New York City and I love building beautiful and intuitive web applications.' },
+      { property: "og:site_name", content: "Damon Tian | Portfolio" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "http://damontian1.github.io",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Damon Tian | Portfolio",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "I’m Damon, a Web Developer from New York City and I love building beautiful and intuitive web applications.",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/portfolio-card.png",
+      },
+      { property: "og:image:width", content: "740" },
+      { property: "og:image:height", content: "300" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
