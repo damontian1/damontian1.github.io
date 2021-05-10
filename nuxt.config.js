@@ -32,10 +32,31 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/portfolio-card.png",
+        content: "/og-card.png",
       },
-      { property: "og:image:width", content: "740" },
-      { property: "og:image:height", content: "300" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "600" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://damontian1.github.io",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Damon Tian | Portfolio",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "I’m Damon, a Web Developer from New York City and I love building beautiful and intuitive web applications.",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/og-card.png",
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
