@@ -32,10 +32,10 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/og-card.png",
+        content: "/seo-card.png",
       },
       { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "600" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         hid: "twitter:url",
@@ -55,7 +55,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "/og-card.png",
+        content: "/seo-card.png",
       },
     ],
     link: [
