@@ -34,8 +34,8 @@ export default {
         property: "og:image",
         content: "/seo-card.png",
       },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image:width", content: "740" },
+      { property: "og:image:height", content: "300" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         hid: "twitter:url",
