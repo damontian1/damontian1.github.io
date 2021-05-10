@@ -32,7 +32,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/seo-card.png",
+        content: "https://damontian1.github.io/seo-card.png",
       },
       { property: "og:image:width", content: "740" },
       { property: "og:image:height", content: "300" },
@@ -55,7 +55,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "/seo-card.png",
+        content: "https://damontian1.github.io/seo-card.png",
       },
     ],
     link: [
