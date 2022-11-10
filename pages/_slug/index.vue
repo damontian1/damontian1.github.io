@@ -16,7 +16,7 @@
       <h2 class="font-bold leading-tight text-3xl">
         {{ currentData.title }}
       </h2>
-      <v-lazy-image
+      <img
         :src="currentData.art"
         alt="poster art of project"
         class="max-w-sm h-64 my-8 rounded"
@@ -57,12 +57,7 @@
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image";
-
 export default {
-  components: {
-    VLazyImage,
-  },
   data() {
     return {
       currentData: "",

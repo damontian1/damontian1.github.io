@@ -6,16 +6,16 @@
         <div class="max-w-screen-sm py-6">
           <div>
             <h1 class="font-bold leading-tight text-3xl">
-              <span class="block pb-5">Hey, you found me!</span> I’m Damon, a
-              Web Developer from New York City and I love building beautiful and
-              intuitive web applications.
+              <span class="block pb-5">Hey, you found me!</span> I’m Damon, a Web
+              Developer from New York City and I love building beautiful and intuitive web
+              applications.
             </h1>
             <hr class="my-6" />
             <h4 class="mb-10 text-gray-800">
               <strong class="block text-black mb-1">My Top Skills:</strong>
-              HTML, CSS, JavaScript, Vue.js, React.js, Laravel, Docker, Tailwind
-              CSS, Bootstrap CSS, Sketch, Statamic CMS, Node.js, Express.js,
-              Bash, Git, MySQL, MongoDB
+              HTML, CSS, JavaScript, Vue.js, React.js, Laravel, Docker, Tailwind CSS,
+              Bootstrap CSS, Sketch, Statamic CMS, Node.js, Express.js, Bash, Git, MySQL,
+              MongoDB
             </h4>
             <div>
               <a
@@ -35,20 +35,21 @@
         </div>
       </div>
       <div class="py-10">
-        <strong class="inline-block text-black mb-2">Projects:</strong>
-        <div class="flex flex-row flex-wrap -mx-2 -my-2">
-          <nuxt-link
+        <strong class="inline-block text-black mb-3">Projects:</strong>
+        <div class="flex flex-row flex-wrap gap-6">
+          <div
             v-for="(item, index) in projects"
-            :to="`/${item.slug}`"
             :key="index"
-            class="px-2 py-2 w-40 sm:w-48 h-full"
+            class="w-48 h-40 bg-gray-50"
           >
-            <v-lazy-image
-              :src="item.art"
-              alt="Logo of project cover art"
-              class="rounded-sm shadow-lg"
-            />
-          </nuxt-link>
+            <nuxt-link :to="`/${item.slug}`">
+              <img
+                :src="item.art"
+                alt="Logo of project cover art"
+                class="rounded-sm w-full h-full object-cover"
+              />
+            </nuxt-link>
+          </div>
         </div>
       </div>
       <div class="h-20 w-full invisible"></div>
@@ -57,12 +58,7 @@
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image";
-
 export default {
-  components: {
-    VLazyImage,
-  },
   data() {
     return {
       projects: "",
