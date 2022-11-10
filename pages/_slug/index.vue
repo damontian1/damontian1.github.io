@@ -16,11 +16,13 @@
       <h2 class="font-bold leading-tight text-3xl">
         {{ currentData.title }}
       </h2>
-      <img
-        :src="currentData.art"
-        alt="poster art of project"
-        class="max-w-sm h-64 my-8 rounded"
-      />
+      <div class="max-w-xs md:max-w-sm h-64 sm:h-72 md:h-80 bg-gray-50 my-8">
+        <img
+          :src="currentData.art"
+          alt="poster art of project"
+          class="w-full h-full object-cover rounded"
+        />
+      </div>
       <div class="mb-6">
         <span class="uppercase font-bold">Description:</span>
         <p>{{ currentData.objective }}</p>
