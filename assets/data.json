@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fnetflix-clone-logo.png?alt=media&token=1dc69b26-24f8-4a09-8b3f-8817a811d662",
+    "art": "https://firebasestorage.googleapis.com/v0/b/codepen-projects-48f69.appspot.com/o/dont-delete-portfolio%2Fnetflix-clone-logo.png?alt=media&token=c78840ed-32b9-4a49-a055-64568fec1f19",
     "title": "Netflix Clone",
     "slug": "netflix-clone",
     "objective": "I wanted to make a clone of the Netflix website using Next.js, Tailwind CSS, and the Movie Database API. The mobile view is a clone of the Netflix iOS app layout.",
@@ -17,7 +17,7 @@
   },
   {
     "id": "2",
-    "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fprojects-and-prototypes.png?alt=media&token=41ff4ba3-0452-43d8-acb2-9a6e945832be",
+    "art": "https://firebasestorage.googleapis.com/v0/b/codepen-projects-48f69.appspot.com/o/dont-delete-portfolio%2Fprojects-and-prototypes.png?alt=media&token=e32baa9e-25cb-48a5-ac6e-aaeadee566a7",
     "title": "Side Projects",
     "slug": "side-projects",
     "objective": "Here are some side projects that I've worked on.",
